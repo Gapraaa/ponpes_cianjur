@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('deskripsi')->nullable();
-            $table->decimal('goal_amount', 15, 2);
-            $table->decimal('current_amount', 15, 2)->default(0);
+            $table->string('title');
+            $table->text('description');
+            $table->decimal('target_amount', 15, 2);
+            $table->decimal('amount', 15, 2)->default(0);
             $table->timestamps();
         });
     }

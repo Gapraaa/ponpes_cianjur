@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('donations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('campaign_id')->constrained()->onDelete('cascade');
-            $table->string('donatur_name');
-            $table->decimal('amount', 15, 2);
-            $table->timestamp('donation_date');
+            $table->decimal('nominal_donasi', 10, 2);
+            $table->string('bukti_donasi')->nullable();
+            $table->string('nama_lengkap');
+            $table->string('phone_email');
+            $table->text('message')->nullable();
+            $table->enum('status', ['pending', 'accepted', 'rejected'])->default('pending');
             $table->timestamps();
         });
     }
