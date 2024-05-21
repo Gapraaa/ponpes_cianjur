@@ -13,29 +13,29 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg" style="background-color: #00763A;">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #00763A;">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link text-light" href="#">Home</a>
-                    <a class="nav-link text-light" href="#">Donasi Online</a>
-                    <a class="nav-link text-light" href="#">Daily News</a>
-                    <a class="nav-link text-light" href="#">PPDB</a>
-                    <a class="nav-link text-light" href="#">Gallery</a>
-                </div>
+          <a class="navbar-brand" href="#">
+            <img src="{{ asset('asset/img/bannerpasantren.jpg') }}" alt="Bootstrap" width="150" height="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link text-light" href="home.html">Home</a>
+              <a class="nav-link text-light" href="donasi1.html">Donasi Online</a>
+              <a class="nav-link text-light" href="berita.html">Daily News</a>
+              <a class="nav-link text-light" href="ppdb.html">PPDB</a>
+              <a class="nav-link text-light" href="galery.html">Gallery</a>
             </div>
+          </div>
         </div>
-    </nav>
+      </nav>
 
     <main>
-        <img src="asset/img/ppdb1.jpg" class="d-block w-100" alt="..." />
+        <img src="{{ asset('asset/img/ppdb1.jpg') }}" class="d-block w-100" alt="..." />
         <div class="container mt-5">
 
             <div class="row justify-content-center">

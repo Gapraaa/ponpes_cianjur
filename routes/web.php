@@ -26,6 +26,11 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
+Route::get('/ponpes', function () {
+    return view('ponpes.index');
+});
+
+
 Route::get('/ppdb/index', [PpdbController::class, 'index'])->name('ppdb.index');
 Route::get('/ppdb/create', [PpdbController::class, 'create'])->name('ppdb.create');
 Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('ppdb.store');
