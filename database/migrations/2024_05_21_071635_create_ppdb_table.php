@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ppdb', function (Blueprint $table) {
+        Schema::create('ppdbs', function (Blueprint $table) {
             $table->id();
             $table->string('nama_siswa');
             $table->string('ttg_siswa');

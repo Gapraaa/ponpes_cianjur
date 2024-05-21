@@ -26,4 +26,5 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
+Route::get('/ppdb/index', [PpdbController::class, 'index'])->name('ppdb.index');
 Route::get('/ppdb/create', [PpdbController::class, 'create'])->name('ppdb.create');

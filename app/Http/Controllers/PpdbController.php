@@ -12,7 +12,8 @@ class PpdbController extends Controller
      */
     public function index()
     {
-        
+        $ppdb = Ppdb::all();
+        return view('ppdb.index', compact('ppdb'));
     }
 
     /**
