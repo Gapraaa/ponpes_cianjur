@@ -28,4 +28,4 @@ Route::get('/dashboard', function () {
 
 Route::get('/ppdb/index', [PpdbController::class, 'index'])->name('ppdb.index');
 Route::get('/ppdb/create', [PpdbController::class, 'create'])->name('ppdb.create');
-route::post('/ppdb/store', [PpdbController::class, 'store'])->name('ppdb.store');
+Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('ppdb.store');
