@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PpdbController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::get('/main', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
+
+Route::get('/ppdb/create', [PpdbController::class, 'create'])->name('ppdb.create');
