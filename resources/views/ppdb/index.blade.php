@@ -26,72 +26,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
-            <div class="row">
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>150</h3>
-
-                            <p>New Orders</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-bag"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                            <p>Bounce Rate</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-warning">
-                        <div class="inner">
-                            <h3>44</h3>
-
-                            <p>User Registrations</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-person-add"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                            <h3>65</h3>
-
-                            <p>Unique Visitors</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-pie-graph"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-            </div>
+            
             <!-- /.row -->
             <!-- Main row -->
             <div class="row">
@@ -139,22 +74,22 @@
                                 <tbody>
                                     @foreach ($ppdb as $pp)
                                     <tr>
-                                        <td>{{$ppdb->id}}</td>
-                                        <td>{{$ppdb->nama_siswa}}</td>
-                                        <td>{{$ppdb->ttg_siswa}}</td>
-                                        <td>{{$ppdb->jenis_kelamin}}</td>
-                                        <td>{{$ppdb->nisn}}</td>
-                                        <td>{{$ppdb->alamat_siswa}}</td>
-                                        <td>{{$ppdb->anak}}</td>
-                                        <td>{{$ppdb->saudara}}</td>
-                                        <td>{{$ppdb->tlpn_siswa}}</td>
-                                        <td>{{$ppdb->nama_ayah}}</td>
-                                        <td>{{$ppdb->nama_ibu}}</td>
-                                        <td>{{$ppdb->alamat_ortu}}</td>
-                                        <td>{{$ppdb->pekerjaan_ayah}}</td>
-                                        <td>{{$ppdb->pekerjaan_ibu}}</td>
-                                        <td>{{$ppdb->tlpn_ayah}}</td>
-                                        <td>{{$ppdb->tlpn_ibu}}</td>
+                                        <td>{{ $pp->id }}</td>
+                                        <td>{{ $pp->nama_siswa }}</td>
+                                        <td>{{ $pp->ttg_siswa }}</td>
+                                        <td>{{ $pp->jenis_kelamin }}</td>
+                                        <td>{{ $pp->nisn }}</td>
+                                        <td>{{ $pp->alamat_siswa }}</td>
+                                        <td>{{ $pp->anak }}</td>
+                                        <td>{{ $pp->saudara }}</td>
+                                        <td>{{ $pp->tlpn_siswa }}</td>
+                                        <td>{{ $pp->nama_ayah }}</td>
+                                        <td>{{ $pp->nama_ibu }}</td>
+                                        <td>{{ $pp->alamat_ortu }}</td>
+                                        <td>{{ $pp->pekerjaan_ayah }}</td>
+                                        <td>{{ $pp->pekerjaan_ibu }}</td>
+                                        <td>{{ $pp->tlpn_ayah }}</td>
+                                        <td>{{ $pp->tlpn_ibu }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

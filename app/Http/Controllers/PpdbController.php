@@ -29,8 +29,35 @@ class PpdbController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        // dd($request->all());
+
+        // Validate the request
+        $validated = $request->validate([
+            'nama_siswa' => 'required|string|max:255',
+            'ttg_siswa' => 'required|string|max:255',
+            'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
+            'nisn' => 'required|string|unique:ppdbs,nisn|max:255',
+            'alamat_siswa' => 'required|string|max:255',
+            'anak' => 'required|integer',
+            'saudara' => 'required|integer',
+            'tlpn_siswa' => 'required|string|max:255',
+            'nama_ayah' => 'required|string|max:255',
+            'nama_ibu' => 'required|string|max:255',
+            'alamat_ortu' => 'required|string|max:255',
+            'pekerjaan_ayah' => 'required|string|max:255',
+            'pekerjaan_ibu' => 'required|string|max:255',
+            'tlpn_ayah' => 'required|string|max:255',
+            'tlpn_ibu' => 'required|string|max:255',
+        ]);
+
+        // Create a new PPDB record
+        Ppdb::create($validated);
+
+        // Redirect or return a response
+        return redirect()->route('ppdb.index')->with('success', 'Data Ppdb Telah Tersimpan');
     }
+
 
     /**
      * Display the specified resource.

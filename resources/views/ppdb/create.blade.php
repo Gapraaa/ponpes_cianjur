@@ -44,19 +44,20 @@
                     <h2>Formulir Pendaftaran Peserta Didik Baru (PPDB)</h2>
                     <div class="card form-container mb-5">
                         <div class="card-body">
-                            <form>
+                            <form action="{{ route('ppdb.store')}}" method="POST">
+                                @csrf
                                 <h3>DATA PESERTA DIDIK</h3>
                                 <div class="mb-3">
-                                    <label for="namaLengkap" class="form-label">Nama calon peserta didik:</label>
-                                    <input type="text" class="form-control" id="namaLengkap" required>
+                                    <label for="nama_siswa" class="form-label">Nama calon peserta didik:</label>
+                                    <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="tanggalLahir" class="form-label">Tempat tanggal lahir:</label>
-                                    <input type="text" class="form-control" id="tanggalLahir" required>
+                                    <label for="ttg_siswa" class="form-label">Tempat tanggal lahir:</label>
+                                    <input type="text" class="form-control" id="ttg_siswa" name="ttg_siswa" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="jenisKelamin" class="form-label">Jenis Kelamin:</label>
-                                    <select class="form-select" id="jenisKelamin" required>
+                                    <label for="jenis_kelamin" class="form-label">Jenis Kelamin:</label>
+                                    <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
                                         <option value="">Pilih jenis kelamin</option>
                                         <option value="Laki-laki">Laki-laki</option>
                                         <option value="Perempuan">Perempuan</option>
@@ -64,59 +65,59 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="nisn" class="form-label">NISN:</label>
-                                    <input type="number" class="form-control" id="nisn" required>
+                                    <input type="number" class="form-control" id="nisn" name="nisn" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="alamat" class="form-label">Alamat:</label>
-                                    <textarea class="form-control" id="alamat" rows="3"></textarea>
+                                    <label for="alamat_siswa" class="form-label">Alamat:</label>
+                                    <textarea class="form-control" id="alamat_siswa" name="alamat_siswa" rows="3" required></textarea>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="anakKe" class="form-label">Anak ke:</label>
-                                        <input type="number" class="form-control" id="anakKe" required>
+                                        <label for="anak" class="form-label">Anak ke:</label>
+                                        <input type="number" class="form-control" id="anak" name="anak" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="jumlahSaudara" class="form-label">Dari (saudara):</label>
-                                        <input type="number" class="form-control" id="jumlahSaudara" required>
+                                        <label for="saudara" class="form-label">Dari (saudara):</label>
+                                        <input type="number" class="form-control" id="saudara" name="saudara" required>
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="notelepon" class="form-label">No telephone:</label>
-                                    <input type="number" class="form-control" id="notelepon" required>
+                                    <label for="tlpn_siswa" class="form-label">No telephone:</label>
+                                    <input type="number" class="form-control" id="tlpn_siswa" name="tlpn_siswa" required>
                                 </div>
                                 <h3>DATA ORANG TUA/WALI</h3>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="namaAyah" class="form-label">Nama Ayah/Wali:</label>
-                                        <input type="text" class="form-control" id="namaAyah" required>
+                                        <label for="nama_ayah" class="form-label">Nama Ayah/Wali:</label>
+                                        <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="namaIbu" class="form-label">Nama Ibu:</label>
-                                        <input type="text" class="form-control" id="namaIbu" required>
+                                        <label for="nama_ibu" class="form-label">Nama Ibu:</label>
+                                        <input type="text" class="form-control" id="nama_ibu" name="nama_ibu" required>
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="alamatorangtua" class="form-label ">Alamat Orang Tua/Wali:</label>
-                                    <textarea class="form-control" id="alamatorangtua" rows="3"></textarea>
+                                    <label for="alamat_ortu" class="form-label">Alamat Orang Tua/Wali:</label>
+                                    <textarea class="form-control" id="alamat_ortu" name="alamat_ortu" rows="3" required></textarea>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="PekerjaanAyah" class="form-label">Pekerjaan Ayah/Wali:</label>
-                                        <input type="text" class="form-control" id="PekerjaanAyah" required>
+                                        <label for="pekerjaan_ayah" class="form-label">Pekerjaan Ayah/Wali:</label>
+                                        <input type="text" class="form-control" id="pekerjaan_ayah" name="pekerjaan_ayah" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="PekerjaanIbu" class="form-label">Pekerjaan Ibu:</label>
-                                        <input type="text" class="form-control" id="PekerjaanIbu" required>
+                                        <label for="pekerjaan_ibu" class="form-label">Pekerjaan Ibu:</label>
+                                        <input type="text" class="form-control" id="pekerjaan_ibu" name="pekerjaan_ibu" required>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="noteleponayah" class="form-label">No telephone Ayah/Wali:</label>
-                                        <input type="number" class="form-control" id="noteleponayah" required>
+                                        <label for="tlpn_ayah" class="form-label">No telephone Ayah/Wali:</label>
+                                        <input type="number" class="form-control" id="tlpn_ayah" name="tlpn_ayah" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="noteleponibu" class="form-label">No telephone Ibu:</label>
-                                        <input type="number" class="form-control" id="noteleponibu" required>
+                                        <label for="tlpn_ibu" class="form-label">No telephone Ibu:</label>
+                                        <input type="number" class="form-control" id="tlpn_ibu" name="tlpn_ibu" required>
                                     </div>
                                 </div>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
