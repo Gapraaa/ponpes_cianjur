@@ -8,9 +8,15 @@ use Illuminate\Http\Request;
 
 class DonationController extends Controller
 {
+    public function index()
+    {
+        $donations = Donation::all();
+        return view('donasi.index', compact('donations'));
+    }
+
     public function create(Campaign $campaign)
     {
-        return view('donations.create', compact('campaign'));
+        return view('donasi.create', compact('campaign'));
     }
 
     public function store(Request $request, Campaign $campaign)
@@ -32,7 +38,7 @@ class DonationController extends Controller
 
         Donation::create($validated);
 
-        return redirect()->route('campaigns.show', $campaign)->with('success', 'Donation created successfully.');
+        return redirect()->route('campaign.show', $campaign)->with('success', 'Donation created successfully.');
     }
 
     public function accept(Donation $donation)
@@ -52,5 +58,12 @@ class DonationController extends Controller
         }
 
         return redirect()->back()->with('success', 'Donation rejected.');
+    }
+
+    public function destroy(Donation $donation)
+    {
+        $donation->delete();
+    
+        return redirect()->back()->with('success', 'Donation deleted successfully');
     }
 }

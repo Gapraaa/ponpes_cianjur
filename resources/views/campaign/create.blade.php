@@ -32,7 +32,7 @@
             <div class="container">
                 <h1>Create Campaign</h1>
             
-                <form action="{{ route('campaigns.store') }}" method="POST">
+                <form action="{{ route('campaign.store') }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>

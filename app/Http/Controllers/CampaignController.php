@@ -16,7 +16,7 @@ class CampaignController extends Controller
 
     public function create()
     {
-        return view('campaigns.create');
+        return view('campaign.create');
     }
 
     public function store(Request $request)
@@ -29,14 +29,21 @@ class CampaignController extends Controller
 
         Campaign::create($validated);
 
-        return redirect()->route('campaigns.index')->with('success', 'Campaign created successfully.');
+        return redirect()->route('campaign.index')->with('success', 'Campaign created successfully.');
     }
 
-    public function show(Campaign $campaign)
+    public function show()
     {
-        return view('campaigns.show', compact('campaign'));
+        $campaigns = Campaign::all(); // Retrieve all campaigns
+        return view('campaign.show', compact('campaigns'));
     }
 
-    
+    public function destroy($id)
+    {
+        $campaign = Campaign::findOrFail($id);
+        $campaign->delete();
+
+        return redirect()->route('campaign.index')->with('success', 'Campaign deleted successfully.');
+    }
 }
 

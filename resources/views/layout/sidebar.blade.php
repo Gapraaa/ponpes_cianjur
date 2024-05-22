@@ -32,29 +32,17 @@
                                 <p>Data PPDB</p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>
-                                    DONASI
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                        <li class="nav-item">
+                            <a href="{{ route('campaign.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data Campaign</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('campaign.index')}}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Campaign</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Donasi</p>
-                                    </a>
-                                </li>
-                                <!-- Add more dropdown items as needed -->
-                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('donation.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data Donasi</p>
+                            </a>
                         </li>
                     </ul>
                 </nav>

@@ -31,7 +31,7 @@
             <!-- Main row -->
             <div class="container">
                 <h1>Campaigns</h1>
-                <a href="{{ route('campaigns.create') }}" class="btn btn-primary mb-3">Create New Campaign</a>
+                <a href="{{ route('campaign.create') }}" class="btn btn-primary mb-3">Create New Campaign</a>
             
                 <table class="table">
                     <thead>
@@ -53,8 +53,13 @@
                                 <td>{{ $campaign->target_amount }}</td>
                                 <td>{{ $campaign->amount }}</td>
                                 <td>
-                                    <a href="{{ route('campaigns.show', $campaign) }}" class="btn btn-primary">View</a>
+                                    <a href="{{ route('campaign.show')}}" class="btn btn-primary">View</a>
                                     <!-- Add other actions like edit and delete if needed -->
+                                    <form action="{{ route('campaign.delete', $campaign->id) }}" method="POST" style="display:inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

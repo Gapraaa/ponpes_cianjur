@@ -37,9 +37,16 @@ Route::get('/ppdb/index', [PpdbController::class, 'index'])->name('ppdb.index');
 Route::get('/ppdb/create', [PpdbController::class, 'create'])->name('ppdb.create');
 Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('ppdb.store');
 
-route::get('/donation/create', [DonationController::class, 'create'])->name('donation.create');
-route::post('/donation/store', [DonationController::class, 'store'])->name('donation.store');
+Route::get('campaign/{campaign}/donation/create', [DonationController::class, 'create'])->name('donation.create');
+Route::post('campaign/{campaign}/donation', [DonationController::class, 'store'])->name('donation.store');
+Route::get('/donation/index', [DonationController::class, 'index'])->name('donation.index');
+Route::post('/donation/{donation}/accept', [DonationController::class, 'accept'])->name('donation.accept');
+Route::post('/donation/{donation}/reject', [DonationController::class, 'reject'])->name('donation.reject');
+Route::delete('/donations/{donation}', [DonationController::class, 'destroy'])->name('donation.destroy');
+
 
 route::get('/campaign/index', [CampaignController::class, 'index'])->name('campaign.index');
 route::get('/campaign/create',[CampaignController::class, 'create'])->name('campaign.create');
 route::post('/campaign/store', [CampaignController::class, 'store'])->name('campaign.store');
+route::delete('/campaign/{id}/delete', [CampaignController::class, 'destroy'])->name('campaign.delete');
+route::get('/campaign/show', [CampaignController::class, 'show'])->name('campaign.show');
