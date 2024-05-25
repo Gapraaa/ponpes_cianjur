@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Campaign;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CampaignController extends Controller
 {
@@ -21,16 +22,48 @@ class CampaignController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        
+        $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'target_amount' => 'required|numeric|min:0.01',
+            'target_amount' => 'required|numeric',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        Campaign::create($validated);
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('campaign_images', 'public');
+        }
+
+        Campaign::create($data);
 
         return redirect()->route('campaign.index')->with('success', 'Campaign created successfully.');
     }
+
+    public function update(Request $request, Campaign $campaign)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'target_amount' => 'required|numeric',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            if ($campaign->image) {
+                Storage::disk('public')->delete($campaign->image);
+            }
+            $data['image'] = $request->file('image')->store('campaign_images', 'public');
+        }
+
+        $campaign->update($data);
+
+        return redirect()->route('campaign.index')->with('success', 'Campaign updated successfully.');
+    }
+
 
     public function show()
     {
@@ -46,4 +79,3 @@ class CampaignController extends Controller
         return redirect()->route('campaign.index')->with('success', 'Campaign deleted successfully.');
     }
 }
-

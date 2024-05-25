@@ -64,6 +64,6 @@ class DonationController extends Controller
     {
         $donation->delete();
     
-        return redirect()->back()->with('success', 'Donation deleted successfully');
+        return redirect()->route('donation.index')->with('success', 'Donation deleted successfully');
     }
 }

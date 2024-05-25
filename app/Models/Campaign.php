@@ -13,8 +13,9 @@ class Campaign extends Model
     protected $fillable = [
         'title',
         'description',
-        'target_amount',
         'amount',
+        'target_amount',
+        'image',
     ];
 
     public function donations()

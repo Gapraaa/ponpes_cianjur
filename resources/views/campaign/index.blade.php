@@ -37,6 +37,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>image</th>
                             <th>Title</th>
                             <th>Description</th>
                             <th>Target Amount</th>
@@ -48,6 +49,7 @@
                         @foreach($campaigns as $campaign)
                             <tr>
                                 <td>{{ $campaign->id }}</td>
+                                <td><img src="{{ Storage::url($campaign->image) }}" alt="image" width="80" height="100"></td>
                                 <td>{{ $campaign->title }}</td>
                                 <td>{{ $campaign->description }}</td>
                                 <td>{{ $campaign->target_amount }}</td>

@@ -30,9 +30,7 @@
             <!-- /.row -->
             <!-- Main row -->
             <div class="container">
-                <h1>Campaigns</h1>
-                <a href="{{ route('campaign.create') }}" class="btn btn-primary mb-3">Create New Campaign</a>
-            
+                <h1>DATA DONASI</h1>
                 <div class="card-body table-responsive p-0">
                     <table class="table table-hover text-nowrap">
                         <thead>

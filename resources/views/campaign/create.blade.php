@@ -32,10 +32,10 @@
             <div class="container">
                 <h1>Create Campaign</h1>
             
-                <form action="{{ route('campaign.store') }}" method="POST">
+                <form action="{{ route('campaign.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="title" class="form-label">Title</label>
+                        <label for="title" class="form-label">Campaign Name</label>
                         <input type="text" class="form-control" id="title" name="title" required>
                     </div>
                     <div class="mb-3">
@@ -44,9 +44,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="target_amount" class="form-label">Target Amount</label>
-                        <input type="number" step="0.01" class="form-control" id="target_amount" name="target_amount" required>
+                        <input type="number" class="form-control" id="target_amount" name="target_amount" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Campaign Image</label>
+                        <input type="file" class="form-control" id="image" name="image">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Campaign</button>
                 </form>
             </div>
             <!-- /.row (main row) -->
