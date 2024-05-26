@@ -43,7 +43,7 @@
         </div>
     </nav>
     <main>
-        <img src="asset/img/donasi2.jpg" class="d-block w-100 mt-5" style="color: #00763a4d" alt="..." />
+        <img src="{{ asset (asset/img/donasi2.jpg)}}" class="d-block w-100 mt-5" style="color: #00763a4d" alt="..." />
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <h2>Donasi Pembangunan Pondok</h2>
             <h2 style="margin-right: 100px;">Pesantren AR-RISALAH</h2>
@@ -126,7 +126,7 @@
                 <div class="col-12">
                     <h4>Informasi Penggalangan Dana</h4>
                     <ul class="list-group">
-                        <li class="list-group-item"><img src="asset/img/bannerpasantren.jpg" alt=""
+                        <li class="list-group-item"><img src="{{ asset (asset/img/bannerpasantren.jpg)}}" alt=""
                                 style="width: 120px;">
                             Pondok Pesantren AR-RISALAH</li>
                     </ul>
@@ -155,7 +155,7 @@
                             <div class="row">
                                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="asset/img/profileorangbaik.jpg"
+                                        <img src="{{ asset (asset/img/profileorangbaik.jpg)}}"
                                             class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
                                             style="width: 100px; height: 100px; object-fit: cover;">
                                         <div class="card-body">
@@ -169,7 +169,7 @@
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="asset/img/profileorangbaik.jpg"
+                                        <img src="{{ asset (asset/img/profileorangbaik.jpg)}}"
                                             class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
                                             style="width: 100px; height: 100px; object-fit: cover;">
                                         <div class="card-body">
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="asset/img/profileorangbaik.jpg"
+                                        <img src="{{ asset (asset/img/profileorangbaik.jpg)}}"
                                             class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
                                             style="width: 100px; height: 100px; object-fit: cover;">
                                         <div class="card-body">
@@ -201,7 +201,7 @@
                             <div class="row">
                                 <div class="col-12   col-sm-6 col-md-4 d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="asset/img/profileorangbaik.jpg"
+                                        <img src="{{ asset (asset/img/profileorangbaik.jpg)}}"
                                             class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
                                             style="width: 100px; height: 100px; object-fit: cover;">
                                         <div class="card-body">
@@ -215,7 +215,7 @@
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="asset/img/profileorangbaik.jpg"
+                                        <img src="{{ asset (asset/img/profileorangbaik.jpg)}}"
                                             class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
                                             style="width: 100px; height: 100px; object-fit: cover;">
                                         <div class="card-body">
@@ -229,7 +229,7 @@
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="asset/img/profileorangbaik.jpg"
+                                        <img src="{{ asset (asset/img/profileorangbaik.jpg)}}"
                                             class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
                                             style="width: 100px; height: 100px; object-fit: cover;">
                                         <div class="card-body">
