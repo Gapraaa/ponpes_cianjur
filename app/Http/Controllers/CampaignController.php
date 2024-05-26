@@ -78,4 +78,10 @@ class CampaignController extends Controller
 
         return redirect()->route('campaign.index')->with('success', 'Campaign deleted successfully.');
     }
+
+    public function detail()
+    {
+        $campaigns = Campaign::all();
+        return view('campaign.detail', compact('campaigns'));
+    }
 }

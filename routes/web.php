@@ -50,3 +50,6 @@ route::get('/campaign/create',[CampaignController::class, 'create'])->name('camp
 route::post('/campaign/store', [CampaignController::class, 'store'])->name('campaign.store');
 route::delete('/campaign/{id}/delete', [CampaignController::class, 'destroy'])->name('campaign.delete');
 route::get('/campaign/show', [CampaignController::class, 'show'])->name('campaign.show');
+// Route::get('/campaign/{campaign}/detail', [CampaignController::class, 'detail'])->name('campaign.detail');
+
+Route::get('/campaign/detail', [CampaignController::class, 'detail'])->name('campaign.detail');
