@@ -79,9 +79,17 @@ class CampaignController extends Controller
         return redirect()->route('campaign.index')->with('success', 'Campaign deleted successfully.');
     }
 
-    public function detail()
+    public function detail($id)
     {
-        $campaigns = Campaign::all();
-        return view('campaign.detail', compact('campaigns'));
+        // Find the campaign by its ID
+        $campaign = Campaign::findOrFail($id);
+
+        // If the campaign is not found, return a 404 error
+        if (!$campaign) {
+            abort(404, 'Campaign not found');
+        }
+
+        // Pass the campaign data to the view
+        return view('campaign.detail', compact('campaign'));
     }
 }

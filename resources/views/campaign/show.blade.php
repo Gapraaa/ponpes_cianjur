@@ -111,7 +111,7 @@
                 <div class="row g-0">
                     <div class="col-md-4">
 
-                        <a href="donasi2.html">
+                        <a href="{{ route('campaign.detail', ['id' => $campaign->id]) }}">
                             <img src="{{ Storage::url($campaign->image) }}" class="img-fluid rounded-start"
                                 alt="..." style="height: 300px;" /></a>
                     </div>
