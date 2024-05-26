@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News | Ponpes AR-RISALAH</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         .page {
             display: none;
@@ -21,7 +21,7 @@
             z-index: 2;
             position: absolute;
             top: 55%;
-            left: 10%;
+            left: 18%;
             transform: translate(-50%, -50%);
             text-align: center;
         }
@@ -29,90 +29,88 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #00763A;">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="asset/img/bannerpasantren.jpg" alt="Bootstrap" width="150" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link text-light" href="home-paud.html">PAUD</a>
-                    <a class="nav-link text-light" href="home-mdta.html">MDTA</a>
-                    <a class="nav-link text-light" href="home-smp.html">SMP</a>
-                    <a class="nav-link text-light" href="home-ponpes.html">PONPES</a>
-                    <a class="nav-link text-light" href="donasi1.html">Donasi Online</a>
-                    <a class="nav-link text-light" href="berita.html">Daily News</a>
-                    <a class="nav-link text-light" href="galery.html">Gallery</a>
-                    <a class="nav-link text-light" href="ppdb.html">PPDB</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    @include('navbar')
     <main>
-        <img src="asset/img/gallery1.jpg" class="d-block w-100 mt-5" alt="..." />
+        <img src="asset/img/manasik.jpg" class="d-block w-100 mt-5" style="color: #00763a4d" alt="..." />
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h2>Gallery</h2>
+            <h2>Berita Hari Ini</h2>
         </div>
 
+        <section id="thumbnail">
+            <div class="card bg-dark text-white">
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-white text-bold">Berita Hari Ini</h5>
+                </div>
+            </div>
+        </section>
+        <!-- Daily News -->
         <section class="container" id="Dailynews">
             <div class="page active" id="page-1">
                 <div class="row g-4 mx-auto p-5">
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
+                                    Obor.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
+                                    Obor.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
+                                    Obor.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
+                                    Obor.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
+                                    Obor.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
+                                    Obor.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <!-- Add more cards here for page 1 -->
@@ -123,58 +121,67 @@
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Pengajian Malam Pada
+                                    Bulan Ramadhan.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">12 Maret 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Pengajian Malam Pada
+                                    Bulan Ramadhan.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">12 Maret 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Pengajian Malam Pada
+                                    Bulan Ramadhan.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">12 Maret 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Pengajian Malam Pada
+                                    Bulan Ramadhan.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">12 Maret 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Pengajian Malam Pada
+                                    Bulan Ramadhan.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">12 Maret 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Pengajian Malam Pada
+                                    Bulan Ramadhan.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">12 Maret 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <!-- Add more cards here for page 2 -->
@@ -185,57 +192,67 @@
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita4.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Hafalan Rutin Setiap
+                                    Pagi.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">29 Februari 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita4.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Hafalan Rutin Setiap
+                                    Pagi.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">29 Februari 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita4.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Hafalan Rutin Setiap
+                                    Pagi.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">29 Februari 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita4.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Hafalan Rutin Setiap
+                                    Pagi.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">29 Februari 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita4.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Hafalan Rutin Setiap
+                                    Pagi.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">29 Februari 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
                             <img src="asset/img/berita4.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita3.jpg" class="card-img-top" alt="...">
-
+                            <div class="card-body">
+                                <h6 class="card-title">Para Santriwati Ponpes AR-RISALAH Melakukan Hafalan Rutin Setiap
+                                    Pagi.</h6>
+                                <br>
+                                <p class="card-text"><small class="text-muted">29 Februari 2019</small></p>
+                            </div>
                         </div>
                     </div>
                     <!-- Add more cards here for page 3 -->
@@ -289,12 +306,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

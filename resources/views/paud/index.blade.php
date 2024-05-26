@@ -34,29 +34,7 @@
 
 <body>
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #00763A;">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="asset/img/bannerpasantren.jpg" alt="Bootstrap" width="150" height="50">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link text-light" href="home-paud.html">PAUD</a>
-          <a class="nav-link text-light" href="home-mdta.html">MDTA</a>
-          <a class="nav-link text-light" href="home-smp.html">SMP</a>
-          <a class="nav-link text-light" href="home-ponpes.html">PONPES</a>
-          <a class="nav-link text-light" href="donasi1.html">Donasi Online</a>
-          <a class="nav-link text-light" href="berita.html">Daily News</a>
-          <a class="nav-link text-light" href="galery.html">Gallery</a>
-          <a class="nav-link text-light" href="ppdb.html">PPDB</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  @include('navbar')
   <!-- end navbar -->
   <main>
     <div id="carouselExampleCaptions" class="carousel slide mt-5">
@@ -70,7 +48,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="asset/img/home paud.jpg" class="d-block w-100" alt="...">
+          <img src="{{ asset ('asset/img/home paud.jpg')}}" class="d-block w-100" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <h3>Paud Ar-Risalah</h3>
@@ -78,7 +56,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="asset/img/home2.jpg" class="d-block w-100" alt="...">
+          <img src="{{ asset ('asset/img/home2.jpg')}}" class="d-block w-100" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <h3>Paud Ar-Risalah</h3>
@@ -86,7 +64,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="asset/img/home3.jpg" class="d-block w-100" alt="...">
+          <img src="{{ asset ('asset/img/home3.jpg')}}" class="d-block w-100" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <h3>Paud Ar-Risalah</h3>
@@ -196,11 +174,11 @@
       </div>
     </div>
     <div class="card text-bg-dark mt-4">
-      <img src="asset/img/homebg2.jpg" class="card-img" alt="..." style="height: 400px;">
+      <img src="{{ asset ('asset/img/homebg2.jpg')}}" class="card-img" alt="..." style="height: 400px;">
       <div class="card-img-overlay">
         <h3 class="card-title text-center">Selayang Pandang</h3>
         <div class="card col-md-6 float-md-end mb-3 ms-md-3 m-5 " style="width: 30rem;">
-          <img src="asset/img/selayang pandang paud.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset ('asset/img/selayang pandang paud.jpg')}}" class="card-img-top" alt="...">
         </div>
         <small class="card-text-center col-md-5 float-md-end mb-3 ms-md-6 m-5">Kami memberikan pelayanan pendidikan
           dengan sepenuh <br> hati kepada seluruh peserta didik, anak-anak yang kami <br> cintai sepenuh hati. PAUD
@@ -275,7 +253,7 @@
       </div>
     </div>
     <div class="card text-bg-dark text-center mt-4">
-      <img src="asset/img/home3.jpg" class="card-img" alt="..." style="height: 400px;">
+      <img src="{{ asset ('asset/img/home3.jpg')}}" class="card-img" alt="..." style="height: 400px;">
       <div class="overlay"></div>
       <div class="card-img-overlay">
         <h2 class="card-title" style="padding-top: 10rem;">Pendaftaran Peserta Didik Baru</h2>
@@ -307,17 +285,17 @@
             <div class="row">
               <div class="col-md-4 mt-3">
                 <div class="card" style="margin-left: 60x;">
-                  <img src="asset/img/kegiatan paud.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/kegiatan paud.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card">
-                  <img src="asset/img/kegiatan paud 4.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/kegiatan paud 4.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card">
-                  <img src="asset/img/kegiatan paud 5.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/kegiatan paud 5.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
             </div>
@@ -326,17 +304,17 @@
             <div class="row">
               <div class="col-md-4 mt-3">
                 <div class="card" style="margin-left: 60x;">
-                  <img src="asset/img/kegiatan 2 paud.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/kegiatan 2 paud.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card">
-                  <img src="asset/img/home5.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/home5.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card">
-                  <img src="asset/img/home6.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/home6.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
             </div>
@@ -345,17 +323,17 @@
             <div class="row ">
               <div class="col-md-4 mt-3">
                 <div class="card" style="margin-left: 60x;">
-                  <img src="asset/img/home4.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/home4.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card">
-                  <img src="asset/img/home5.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/home5.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card">
-                  <img src="asset/img/home6.jpg" class="card-img-top" alt="...">
+                  <img src="{{ asset ('asset/img/home6.jpg')}}" class="card-img-top" alt="...">
                 </div>
               </div>
             </div>
@@ -389,51 +367,51 @@
           <div class="carousel-item active">
             <div class="row">
               <div class="col mt-3">
-                <img src="asset/img/logounivairlangga2.png" class="card-img-top" alt="..." style="max-width: 200px;">
+                <img src="{{ asset ('asset/img/logounivairlangga2.png')}}" class="card-img-top" alt="..." style="max-width: 200px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivdjuanda.png" class="card-img-top" alt="..." style="max-width: 230px;">
+                <img src="{{ asset ('asset/img/logounivdjuanda.png')}}" class="card-img-top" alt="..." style="max-width: 230px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivibnkhaldun.jpg" class="card-img-top" alt="..."
+                <img src="{{ asset ('asset/img/logounivibnkhaldun.jpg')}}" class="card-img-top" alt="..."
                   style="max-width: 200px; padding-left: 50px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivislam.jpg" class="card-img-top" alt="..." style="max-width: 200px;">
+                <img src="{{ asset ('asset/img/logounivislam.jpg')}}" class="card-img-top" alt="..." style="max-width: 200px;">
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="row">
               <div class="col mt-3">
-                <img src="asset/img/logounivairlangga2.png" class="card-img-top" alt="..." style="max-width: 200px;">
+                <img src="{{ asset ('asset/img/logounivairlangga2.png')}}" class="card-img-top" alt="..." style="max-width: 200px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivdjuanda.png" class="card-img-top" alt="..." style="max-width: 230px;">
+                <img src="{{ asset ('asset/img/logounivdjuanda.png')}}" class="card-img-top" alt="..." style="max-width: 230px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivibnkhaldun.jpg" class="card-img-top" alt="..."
+                <img src="{{ asset ('asset/img/logounivibnkhaldun.jpg')}}" class="card-img-top" alt="..."
                   style="max-width: 200px; padding-left: 50px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivislam.jpg" class="card-img-top" alt="..." style="max-width: 200px;">
+                <img src="{{ asset ('asset/img/logounivislam.jpg')}}" class="card-img-top" alt="..." style="max-width: 200px;">
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="row">
               <div class="col mt-3">
-                <img src="asset/img/logounivairlangga2.png" class="card-img-top" alt="..." style="max-width: 200px;">
+                <img src="{{ asset ('asset/img/logounivairlangga2.png')}}" class="card-img-top" alt="..." style="max-width: 200px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivdjuanda.png" class="card-img-top" alt="..." style="max-width: 230px;">
+                <img src="{{ asset ('asset/img/logounivdjuanda.png')}}" class="card-img-top" alt="..." style="max-width: 230px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivibnkhaldun.jpg" class="card-img-top" alt="..."
+                <img src="{{ asset ('asset/img/logounivibnkhaldun.jpg')}}" class="card-img-top" alt="..."
                   style="max-width: 200px; padding-left: 50px;">
               </div>
               <div class="col mt-3">
-                <img src="asset/img/logounivislam.jpg" class="card-img-top" alt="..." style="max-width: 200px;">
+                <img src="{{ asset ('asset/img/logounivislam.jpg')}}" class="card-img-top" alt="..." style="max-width: 200px;">
               </div>
             </div>
           </div>

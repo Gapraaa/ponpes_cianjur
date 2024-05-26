@@ -7,6 +7,7 @@
     <title>Ponpes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <style>
         .carousel-item .overlay {
             position: absolute;
@@ -14,7 +15,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(110, 250, 110, 0.199);
+            background-color: rgba(53, 102, 53, 0.342);
             /* Green with 75% transparency */
             z-index: 1;
             /* Ensures the overlay is above the image but below the captions */
@@ -22,33 +23,18 @@
 
         .carousel-caption {
             z-index: 2;
-            /* Ensures the captions are above the overlay */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #00763A;">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="asset/img/bannerpasantren.jpg" alt="Bootstrap" width="150" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link text-light" href="home.html">Home</a>
-                    <a class="nav-link text-light" href="donasi1.html">Donasi Online</a>
-                    <a class="nav-link text-light" href="berita.html">Daily News</a>
-                    <a class="nav-link text-light" href="ppdb.html">PPDB</a>
-                    <a class="nav-link text-light" href="galery.html">Gallery</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    @include('navbar')
     <!-- end navbar -->
     <main>
         <div id="carouselExampleCaptions" class="carousel slide mt-5">
@@ -62,27 +48,27 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="asset/img/home1.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ asset ('asset/img/home1.jpg')}}" class="d-block w-100" alt="...">
                     <div class="overlay"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Ponpes Modern Ar-Risalah Syafi’iyyah</h3>
-                        <h5>Unggul, Berbudi Tinggi, Berpengetahuan Luas</h5>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h4>Ponpes Modern Ar-Risalah Syafi’iyyah</h4>
+                        <p>Unggul, Berbudi Tinggi, Berpengetahuan Luas</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="asset/img/home2.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ asset ('asset/img/home2.jpg')}}" class="d-block w-100" alt="...">
                     <div class="overlay"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Ponpes Modern Ar-Risalah Syafi’iyyah</h3>
-                        <h5>Unggul, Berbudi Tinggi, Berpengetahuan Luas</h5>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h4>Ponpes Modern Ar-Risalah Syafi’iyyah</h4>
+                        <p>Unggul, Berbudi Tinggi, Berpengetahuan Luas</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="asset/img/home3.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ asset ('asset/img/home3.jpg')}}" class="d-block w-100" alt="...">
                     <div class="overlay"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Ponpes Modern Ar-Risalah Syafi’iyyah</h3>
-                        <h5>Unggul, Berbudi Tinggi, Berpengetahuan Luas</h5>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h4>Ponpes Modern Ar-Risalah Syafi’iyyah</h4>
+                        <p>Unggul, Berbudi Tinggi, Berpengetahuan Luas</p>
                     </div>
                 </div>
             </div>
@@ -112,17 +98,17 @@
                         class="bi bi-whatsapp" viewBox="0 0 16 16">
                         <path
                             d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-                    </svg> Whatsapp
+                    </svg> Informasi
                 </button>
             </div>
         </div>
-        <div class="countainer text-center mt-4">
+        <div class="countainer col-10 mx-auto mb-5 text-center mt-4">
             <h4>Our Program</h4>
             <h3><span style="color: #00763A;">Pendidikan</span> Berbasis Tauhid</h3>
             <div class="container mt-4">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
                     <div class="col">
-                        <div class="card" style="height: 20rem;">
+                        <div class="card" style="height: 23rem;">
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
                                     <svg width="81" height="81" viewBox="0 0 81 81" fill="none"
@@ -144,7 +130,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card" style="background-color: #00763A; height: 20rem; color: #FFFFFF;">
+                        <div class="card" style="background-color: #00763A; height: 23rem; color: #FFFFFF;">
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
                                     <svg width="71" height="81" viewBox="0 0 71 81" fill="none"
@@ -169,7 +155,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card" style="height: 20rem;">
+                        <div class="card" style="height: 23rem;">
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
                                     <svg width="95" height="81" viewBox="0 0 95 81" fill="none"
@@ -197,11 +183,11 @@
             </div>
         </div>
         <div class="card text-bg-dark mt-4">
-            <img src="asset/img/homebg2.jpg" class="card-img" alt="..." style="height: 400px;">
+            <img src="{{ asset ('asset/img/homebg2.jpg')}}" class="card-img" alt="..." style="height: 400px;">
             <div class="card-img-overlay">
                 <h3 class="card-title text-center">Selayang Pandang</h3>
                 <div class="card col-md-6 float-md-end mb-3 ms-md-3 m-5" style="width: 30rem;">
-                    <img src="asset/img/home2.jpg" class="card-img-top" alt="...">
+                    <img src="{{ asset ('asset/img/home2.jpg')}}" class="card-img-top" alt="...">
                 </div>
                 <small class="card-text-center col-md-5 float-md-end mb-3 ms-md-6 m-5">Ponpes Modern Ar-Risalah
                     Syafi’iyyah
@@ -369,7 +355,7 @@
             </div>
         </div>
         <div class="card text-bg-dark text-center mt-4">
-            <img src="asset/img/home3.jpg" class="card-img" alt="..." style="height: 400px;">
+            <img src="{{ asset ('asset/img/home3.jpg')}}" class="card-img" alt="..." style="height: 400px;">
             <div class="overlay"></div>
             <div class="card-img-overlay">
                 <h2 class="card-title" style="padding-top: 10rem;">Pendaftaran Peserta Didik Baru</h2>
@@ -402,17 +388,17 @@
                         <div class="row">
                             <div class="col-md-4 mt-3">
                                 <div class="card" style="margin-left: 60x;">
-                                    <img src="asset/img/home4.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home4.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
                                 <div class="card">
-                                    <img src="asset/img/home5.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home5.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
                                 <div class="card">
-                                    <img src="asset/img/home6.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home6.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -421,17 +407,17 @@
                         <div class="row">
                             <div class="col-md-4 mt-3">
                                 <div class="card" style="margin-left: 60x;">
-                                    <img src="asset/img/home4.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home4.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
                                 <div class="card">
-                                    <img src="asset/img/home5.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home5.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
                                 <div class="card">
-                                    <img src="asset/img/home6.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home6.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -440,17 +426,17 @@
                         <div class="row ">
                             <div class="col-md-4 mt-3">
                                 <div class="card" style="margin-left: 60x;">
-                                    <img src="asset/img/home4.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home4.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
                                 <div class="card">
-                                    <img src="asset/img/home5.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home5.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
                                 <div class="card">
-                                    <img src="asset/img/home6.jpg" class="card-img-top" alt="...">
+                                    <img src="{{ asset ('asset/img/home6.jpg')}}" class="card-img-top" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -486,19 +472,19 @@
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="col mt-3">
-                                <img src="asset/img/logounivairlangga2.png" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivairlangga2.png')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivdjuanda.png" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivdjuanda.png')}}" class="card-img-top" alt="..."
                                     style="max-width: 230px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivibnkhaldun.jpg" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivibnkhaldun.jpg')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px; padding-left: 50px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivislam.jpg" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivislam.jpg')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px;">
                             </div>
                         </div>
@@ -506,19 +492,19 @@
                     <div class="carousel-item">
                         <div class="row">
                             <div class="col mt-3">
-                                <img src="asset/img/logounivairlangga2.png" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivairlangga2.png')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivdjuanda.png" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivdjuanda.png')}}" class="card-img-top" alt="..."
                                     style="max-width: 230px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivibnkhaldun.jpg" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivibnkhaldun.jpg')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px; padding-left: 50px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivislam.jpg" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivislam.jpg')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px;">
                             </div>
                         </div>
@@ -526,19 +512,19 @@
                     <div class="carousel-item">
                         <div class="row">
                             <div class="col mt-3">
-                                <img src="asset/img/logounivairlangga2.png" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivairlangga2.png')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivdjuanda.png" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivdjuanda.png')}}" class="card-img-top" alt="..."
                                     style="max-width: 230px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivibnkhaldun.jpg" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivibnkhaldun.jpg')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px; padding-left: 50px;">
                             </div>
                             <div class="col mt-3">
-                                <img src="asset/img/logounivislam.jpg" class="card-img-top" alt="..."
+                                <img src="{{ asset ('asset/img/logounivislam.jpg')}}" class="card-img-top" alt="..."
                                     style="max-width: 200px;">
                             </div>
                         </div>
@@ -564,32 +550,25 @@
             <div class="row pb-3">
                 <div class="col-md-4">
                     <h5>Pondok Pesantren Ar-Risalah Safi’iyah</h5>
-                    <p><b>Alamat</b>: Kp.Paseban RT / RW 07 / 01, Desa Hegarmanah, Kecamatan Sukaluyu, Kabupaten Cianjur
-                    </p>
+                    <p><b>Alamat</b>: Kp.Paseban RT / RW 07 / 01, Desa Hegarmanah,  Kecamatan Sukaluyu,  Kabupaten Cianjur</p>
                 </div>
                 <div class="col-md-4">
                 </div>
                 <div class="col-md-4 d-flex flex-column align-items-end">
                     <ul class="list-unstyled mb-2">
-                        <li><i class="fas fa-phone-alt font-sans"> </i> 081214192627</li>
+                        <li><i class="fas fa-phone-alt font-sans"> </i>   081214192627</li>
                     </ul>
                     <div class="mx-0">
-                        <a href="#" class="text-white mr-1">
-                            <h5 class="fab fa-facebook"></h5>
-                        </a>
-                        <a href="#" class="text-white mr-1">
-                            <h5 class="fab fa-instagram"></h5>
-                        </a>
-                        <a href="#" class="text-white mr-1">
-                            <h5 class="fab fa-whatsapp"></h5>
-                        </a>
-                        <a href="#" class="text-white mr-1">
-                            <h5 class="fab fa-youtube"></h5>
-                        </a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-facebook"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-instagram"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-whatsapp"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-youtube"></h5></a>
                     </div>
                 </div>
             </div>
             <hr class="my-3 bg-white">
+            <div class="row">
+            </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

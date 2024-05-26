@@ -55,29 +55,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #00763A;">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="asset/img/bannerpasantren.jpg" alt="Bootstrap" width="150" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link text-light" href="home-paud.html">PAUD</a>
-                    <a class="nav-link text-light" href="home-mdta.html">MDTA</a>
-                    <a class="nav-link text-light" href="home-smp.html">SMP</a>
-                    <a class="nav-link text-light" href="home.html">PONPES</a>
-                    <a class="nav-link text-light" href="donasi1.html">Donasi Online</a>
-                    <a class="nav-link text-light" href="berita.html">Daily News</a>
-                    <a class="nav-link text-light" href="ppdb.html">PPDB</a>
-                    <a class="nav-link text-light" href="galery.html">Gallery</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    @include('navbar')
     <main>
         <section id="thumbnail">
             <div class="card bg-dark text-white">

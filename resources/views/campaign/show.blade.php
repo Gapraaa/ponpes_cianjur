@@ -73,29 +73,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #00763A;">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="{{ asset('asset/img/bannerpasantren.jpg') }}" alt="Bootstrap" width="150" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link text-light" href="home-paud.html">PAUD</a>
-                    <a class="nav-link text-light" href="home-mdta.html">MDTA</a>
-                    <a class="nav-link text-light" href="home-smp.html">SMP</a>
-                    <a class="nav-link text-light" href="home.html">PONPES</a>
-                    <a class="nav-link text-light" href="donasi1.html">Donasi Online</a>
-                    <a class="nav-link text-light" href="berita.html">Daily News</a>
-                    <a class="nav-link text-light" href="ppdb.html">PPDB</a>
-                    <a class="nav-link text-light" href="galery.html">Gallery</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    @include('navbar')
     <main>
         <img src="{{ asset('asset/img/donasi1.jpg') }}" class="d-block w-100 mt-5" alt="...">
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -120,9 +98,9 @@
                             <h4 class="card-title"> <a href="donasi2.html" style="text-decoration: none; color: black;">
                                     {{ $campaign->title }}</a>
                             </h4>
-                            <h4 class="card-text">Rp. {{ $campaign->target_amount }}</h4>
+                            <h4 class="card-text">Rp. {{ number_format($campaign->target_amount, 0, ',', '.') }}</h4>
                             <p class="card-text">
-                                <small>Terkumpul Dari: Rp. {{ $campaign->amount }}</small>
+                                <small>Terkumpul Dari: Rp. {{ number_format($campaign->amount, 0, ',', '.') }}</small>
                             </p>
 
                             <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
@@ -290,28 +268,19 @@
             <div class="row pb-3">
                 <div class="col-md-4">
                     <h5>Pondok Pesantren Ar-Risalah Safi’iyah</h5>
-                    <p><b>Alamat</b>: Kp.Paseban RT / RW 07 / 01, Desa Hegarmanah, Kecamatan Sukaluyu, Kabupaten Cianjur
-                    </p>
+                    <p><b>Alamat</b>: Kp.Paseban RT / RW 07 / 01, Desa Hegarmanah,  Kecamatan Sukaluyu,  Kabupaten Cianjur</p>
                 </div>
                 <div class="col-md-4">
                 </div>
                 <div class="col-md-4 d-flex flex-column align-items-end">
                     <ul class="list-unstyled mb-2">
-                        <li><i class="fas fa-phone-alt font-sans"> </i> 081214192627</li>
+                        <li><i class="fas fa-phone-alt font-sans"> </i>   081214192627</li>
                     </ul>
                     <div class="mx-0">
-                        <a href="#" class="text-white mr-1">
-                            <h5 class="fab fa-facebook"></h5>
-                        </a>
-                        <a href="#" class="text-white mr-1">
-                            <h5 class="fab fa-instagram"></h5>
-                        </a>
-                        <a href="#" class="text-white mr-1">
-                            <h5 class="fab fa-whatsapp"></h5>
-                        </a>
-                        <a href="#" class="text-white mr-1">
-                            <h5 class="fab fa-youtube"></h5>
-                        </a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-facebook"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-instagram"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-whatsapp"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-youtube"></h5></a>
                     </div>
                 </div>
             </div>

@@ -30,8 +30,27 @@ Route::get('/dashboard', function () {
 
 Route::get('/ponpes', function () {
     return view('ponpes.index');
-});
+})->name('ponpes');
 
+Route::get('/smp', function () {
+    return view('smp.index');
+})->name('smp');
+
+Route::get('/paud', function () {
+    return view('paud.index');
+})->name('paud');
+
+Route::get('/gallery', function () {
+    return view('gallery.index');
+})->name('gallery');
+
+Route::get('/mdta', function () {
+    return view('mdta.index');
+})->name('mdta');
+
+Route::get('/berita', function () {
+    return view('berita.index');
+})->name('berita');
 
 Route::get('/ppdb/index', [PpdbController::class, 'index'])->name('ppdb.index');
 Route::get('/ppdb/create', [PpdbController::class, 'create'])->name('ppdb.create');
@@ -43,7 +62,6 @@ Route::get('/donation/index', [DonationController::class, 'index'])->name('donat
 Route::post('/donation/{donation}/accept', [DonationController::class, 'accept'])->name('donation.accept');
 Route::post('/donation/{donation}/reject', [DonationController::class, 'reject'])->name('donation.reject');
 Route::delete('/donations/{donation}', [DonationController::class, 'destroy'])->name('donation.destroy');
-
 
 route::get('/campaign/index', [CampaignController::class, 'index'])->name('campaign.index');
 route::get('/campaign/create',[CampaignController::class, 'create'])->name('campaign.create');
