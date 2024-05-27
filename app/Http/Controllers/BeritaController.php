@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BeritaController extends Controller
 {
@@ -11,7 +13,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        //
+        $beritas = Berita::all();
+        return view('berita.index', compact('beritas'));
     }
 
     /**
@@ -19,7 +22,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        //
+        return view('berita.create');
     }
 
     /**
@@ -27,16 +30,32 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('berita_images', 'public');
+        }
+
+        Berita::create($data);
+
+        return redirect()->route('berita.index')->with('success', 'Berita created successfully.');
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $beritas = Berita::all();
+        return view('berita.show', compact('beritas'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -57,8 +76,11 @@ class BeritaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy( $id)
     {
-        //
+        $berita = Berita::findOrFail($id);
+        $berita->delete();
+
+        return redirect()->route('berita.index')->with('success', 'Berita deleted successfully.');
     }
 }
