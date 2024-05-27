@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/main', function () {
     return view('layout.main');
 });
@@ -28,7 +24,7 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
-Route::get('/ponpes', function () {
+Route::get('/', function () {
     return view('ponpes.index');
 })->name('ponpes');
 

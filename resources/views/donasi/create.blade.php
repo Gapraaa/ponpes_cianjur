@@ -59,14 +59,13 @@
     <main>
         <section id="thumbnail">
             <div class="card bg-dark text-white">
-                <img src="asset/img/pembayaran1.JPG" class="card-img" alt="Donasi">
+                <img src="{{ Storage::url($campaign->image) }}" class="card-img" alt="Donasi">
             </div>
         </section>
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto mt-3">
-                    <h3 class="">Donasi Pembangunan Pondok Pesantren</h3>
-                    <h3>AR-RISALAH</h3>
+                    <h3>{{ $campaign->title}}</h3>
                 </div>
             </div>
         </div>
