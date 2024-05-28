@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PpdbController;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\DonationController;
@@ -44,9 +45,9 @@ Route::get('/mdta', function () {
     return view('mdta.index');
 })->name('mdta');
 
-Route::get('/berita', function () {
-    return view('berita.index');
-})->name('berita');
+// Route::get('/berita', function () {
+//     return view('berita.index');
+// })->name('berita');
 
 Route::get('/ppdb/index', [PpdbController::class, 'index'])->name('ppdb.index');
 Route::get('/ppdb/create', [PpdbController::class, 'create'])->name('ppdb.create');
@@ -65,3 +66,9 @@ route::post('/campaign/store', [CampaignController::class, 'store'])->name('camp
 route::delete('/campaign/{id}/delete', [CampaignController::class, 'destroy'])->name('campaign.delete');
 route::get('/campaign/show', [CampaignController::class, 'show'])->name('campaign.show');
 Route::get('/campaign/{id}', [CampaignController::class, 'detail'])->name('campaign.detail');
+
+Route::get('/berita/show', [BeritaController::class, 'show'])->name('berita.show');
+Route::get('/berita/index', [BeritaController::class, 'index'])->name('berita.index');
+Route::get('/berita/create', [BeritaController::class, 'create'])->name('berita.create');
+Route::post('/berita/store', [BeritaController::class, 'store'])->name('berita.store');
+Route::delete('/berita/{berita}', [BeritaController::class, 'destroy'])->name('berita.delete');

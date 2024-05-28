@@ -14,7 +14,7 @@
                 <a class="nav-link text-light" href="{{ route('smp') }}">SMP</a>
                 <a class="nav-link text-light" href="{{ route('ponpes') }}">PONPES</a>
                 <a class="nav-link text-light" href="{{ route('campaign.show') }}">Donasi Online</a>
-                <a class="nav-link text-light" href="{{ route('berita') }}">Daily News</a>
+                <a class="nav-link text-light" href="{{ route('berita.show') }}">Daily News</a>
                 <a class="nav-link text-light" href="{{ route('gallery') }}">Gallery</a>
                 <a class="nav-link text-light" href="{{ route('ppdb.create')}}">PPDB</a>
             </div>
