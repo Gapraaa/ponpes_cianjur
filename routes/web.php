@@ -4,6 +4,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PpdbController;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -73,3 +74,10 @@ Route::get('/berita/index', [BeritaController::class, 'index'])->name('berita.in
 Route::get('/berita/create', [BeritaController::class, 'create'])->name('berita.create');
 Route::post('/berita/store', [BeritaController::class, 'store'])->name('berita.store');
 Route::delete('/berita/{berita}', [BeritaController::class, 'destroy'])->name('berita.delete');
+
+Route::get('/gallery/show', [GalleryController::class, 'show'])->name('gallery.show');
+Route::get('/gallery/index', [GalleryController::class, 'index'])->name('gallery.index');
+Route::get('/gallery/create', [GalleryController::class, 'create'])->name('gallery.create');
+Route::post('/gallery/store', [GalleryController::class, 'store'])->name('gallery.store');
+Route::delete('/gallery/{gallery}', [GalleryController::class, 'destroy'])->name('gallery.delete');
+

@@ -50,7 +50,7 @@
                             <tr>
                                 <td>{{ $donation->id }}</td>
                                 <td>{{ $donation->nominal_donasi }}</td>
-                                <td><img src="{{ Storage::url($donation->bukti_donasi) }}" alt="Bukti Donasi" width="80" height="100"></td>
+                                <td><img src="{{ Storage::url($donation->bukti_donasi) }}" alt="Bukti Donasi" width="80" height="100" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="{{ Storage::url($donation->bukti_donasi) }}"></td>
                                 <td>{{ $donation->nama_lengkap }}</td>
                                 <td>{{ $donation->phone_email }}</td>
                                 <td>{{ $donation->message }}</td>
@@ -85,4 +85,36 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
 @include('layout.footer')
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Bukti</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Gambar Donasi" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+<!-- JavaScript for handling image click event -->
+<script>
+    // Mengubah sumber gambar modal saat gambar diklik
+    document.querySelectorAll('[data-bs-toggle="modal"]').forEach((element) => {
+        element.addEventListener('click', (event) => {
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = event.target.getAttribute('data-src');
+        });
+    });
+</script>

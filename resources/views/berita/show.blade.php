@@ -42,21 +42,22 @@
                 </div>
                 @endforeach
             </div>
-
-            <!-- Simple Previous and Next Pagination -->
-            <div class="d-flex justify-content-between">
-                @if ($beritas->onFirstPage())
-                <span class="btn btn-secondary disabled">Previous</span>
-                @else
-                <a href="{{ $beritas->previousPageUrl() }}" class="btn btn-primary">Previous</a>
-                @endif
-
-                @if ($beritas->hasMorePages())
-                <a href="{{ $beritas->nextPageUrl() }}" class="btn btn-primary">Next</a>
-                @else
-                <span class="btn btn-secondary disabled">Next</span>
-                @endif
-            </div>
+            <section class="mx-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination d-flex justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $beritas->previousPageUrl() }}" aria-label="Previous" onclick="showPage('prev')">
+                                <span aria-hidden="true">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $beritas->nextPageUrl() }}" aria-label="Next" onclick="showPage('next')">
+                                <span aria-hidden="true">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
         </section>
     </main>
     
