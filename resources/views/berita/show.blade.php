@@ -165,7 +165,7 @@
                     currentPage++;
                 }
             } else {
-                currentPage = page;
+                currentPage = parseInt(page); // Ensure the page number is an integer
             }
 
             pages.forEach((p, index) => {
