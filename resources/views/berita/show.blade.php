@@ -43,12 +43,20 @@
                 @endforeach
             </div>
 
-            <!-- pagination links -->
-            @if ($beritas->lastPage() > 1)
-            <div class="d-flex justify-content-center">
-                {{ $beritas->links() }}
+            <!-- Simple Previous and Next Pagination -->
+            <div class="d-flex justify-content-between">
+                @if ($beritas->onFirstPage())
+                <span class="btn btn-secondary disabled">Previous</span>
+                @else
+                <a href="{{ $beritas->previousPageUrl() }}" class="btn btn-primary">Previous</a>
+                @endif
+
+                @if ($beritas->hasMorePages())
+                <a href="{{ $beritas->nextPageUrl() }}" class="btn btn-primary">Next</a>
+                @else
+                <span class="btn btn-secondary disabled">Next</span>
+                @endif
             </div>
-            @endif
         </section>
     </main>
     
