@@ -52,6 +52,7 @@ Route::get('/mdta', function () {
 Route::get('/ppdb/index', [PpdbController::class, 'index'])->name('ppdb.index');
 Route::get('/ppdb/create', [PpdbController::class, 'create'])->name('ppdb.create');
 Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('ppdb.store');
+Route::delete('/ppdb/{id}', [PpdbController::class, 'destroy'])->name('ppdb.destroy');
 
 Route::get('campaign/{campaign}/donation/create', [DonationController::class, 'create'])->name('donation.create');
 Route::post('campaign/{campaign}/donation', [DonationController::class, 'store'])->name('donation.store');

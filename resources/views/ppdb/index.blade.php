@@ -1,6 +1,5 @@
-@include('layout.header')
-
-@include('layout.sidebar')
+@extends('layout.header')
+@extends('layout.sidebar')
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -69,6 +68,7 @@
                                         <th>Kerja Ibu</th>
                                         <th>No Tlpn Ayah/Wali</th>
                                         <th>No Tlpn Ibu</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -90,6 +90,13 @@
                                         <td>{{ $pp->pekerjaan_ibu }}</td>
                                         <td>{{ $pp->tlpn_ayah }}</td>
                                         <td>{{ $pp->tlpn_ibu }}</td>
+                                        <td>
+                                            <form action="{{ route('ppdb.destroy', $pp->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -106,4 +113,4 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-@include('layout.footer')
+@extends('layout.footer')

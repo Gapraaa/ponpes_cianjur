@@ -86,8 +86,14 @@ class PpdbController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Ppdb $ppdb)
-    {
-        //
+    public function destroy($id)
+{
+    $ppdb = Ppdb::find($id);
+    if ($ppdb) {
+        $ppdb->delete();
+        return redirect()->back()->with('success', 'Data PPDB berhasil dihapus.');
     }
+    return redirect()->back()->with('error', 'Data PPDB tidak ditemukan.');
+}
+
 }
