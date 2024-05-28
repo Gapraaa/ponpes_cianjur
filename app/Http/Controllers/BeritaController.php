@@ -52,7 +52,7 @@ class BeritaController extends Controller
      */
     public function show()
     {
-        $beritas = Berita::all();
+        $beritas = Berita::paginate(9);
         return view('berita.show', compact('beritas'));
     }
 
