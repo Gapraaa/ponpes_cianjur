@@ -59,7 +59,7 @@
     <main>
         <section id="thumbnail">
             <div class="card bg-dark text-white">
-                <img src="{{ Storage::url($campaign->image) }}" class="card-img" alt="Donasi">
+                <img src="{{ Storage::url($campaign->image) }}" class="card-img" style="max-height: 500px; margin: 0 auto;" alt="Donasi">
             </div>
         </section>
         <div class="container">

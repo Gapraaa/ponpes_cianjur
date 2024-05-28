@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Campaign;
+use App\Models\Donation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -83,6 +84,7 @@ class CampaignController extends Controller
     {
         // Find the campaign by its ID
         $campaign = Campaign::findOrFail($id);
+        $donations = Donation::all();
 
         // If the campaign is not found, return a 404 error
         if (!$campaign) {
@@ -90,6 +92,6 @@ class CampaignController extends Controller
         }
 
         // Pass the campaign data to the view
-        return view('campaign.detail', compact('campaign'));
+        return view('campaign.detail', compact('campaign', 'donations'));
     }
 }

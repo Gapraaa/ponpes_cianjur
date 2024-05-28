@@ -21,7 +21,7 @@
 <body>
     @include('navbar')
     <main>
-        <img src="{{ Storage::url($campaign->image) }}" class="d-block w-100 mt-5" style="color: #00763a4d" alt="..." />
+        <img src="{{ Storage::url($campaign->image) }}" class="d-block w-100 mt-5" style="max-height: 500px; margin: 0 auto;" alt="..."/>
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
             <h2>Donasi Pembangunan Pondok</h2>
             <h2 style="margin-right: 100px;">Pesantren AR-RISALAH</h2>
@@ -93,27 +93,30 @@
                         <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <!-- Add more indicators as needed -->
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        @foreach ($donations->chunk(3) as $donationChunk)
+                        <div class="carousel-item @if($loop->first) active @endif">
                             <div class="row">
+                                @foreach ($donationChunk as $donation)
                                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
                                         <img src="{{ asset('asset/img/profileorangbaik.jpg')}}"
                                             class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
                                             style="width: 100px; height: 100px; object-fit: cover;">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title">Orang Baik</h5>
+                                            <h5 class="card-title">{{ $donation->nama_lengkap}}</h5>
                                             <p class="card-text">Berdonasi Sebesar</p>
-                                            <p class="card-text"><b>Rp. 15.000</b></p>
-                                            <p class="card-text">2 menit yang lalu</p>
+                                            <p class="card-text"><b>Rp. {{ number_format($donation->nominal_donasi, 0, ',', '.') }}</b></p>
+                                            <p class="card-text">{{ $donation->created_at->format('d M Y') }}</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Repeat similar structure for other donors as needed -->
+                                @endforeach
                             </div>
                         </div>
-                        <!-- Repeat similar structure for other carousel items as needed -->
+                        @endforeach
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider"
                         data-bs-slide="prev">
@@ -136,12 +139,22 @@
                     <h5>Pondok Pesantren Ar-Risalah Safi’iyah</h5>
                     <p><b>Alamat</b>: Kp.Paseban RT / RW 07 / 01, Desa Hegarmanah,  Kecamatan Sukaluyu,  Kabupaten Cianjur</p>
                 </div>
-                <div class="col-md-4"></div>
                 <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:email@example.com" class="text-white text-decoration-none">email@example.com</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+123456789" class="text-white text-decoration-none">+123456789</a></p>
                 </div>
+                <div class="col-md-4 d-flex flex-column align-items-end">
+                    <ul class="list-unstyled mb-2">
+                        <li><i class="fas fa-phone-alt font-sans"> </i>   081214192627</li>
+                    </ul>
+                    <div class="mx-0">
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-facebook"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-instagram"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-whatsapp"></h5></a>
+                        <a href="#" class="text-white mr-1"><h5 class="fab fa-youtube"></h5></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3 bg-white">
+            <div class="row">
             </div>
         </div>
     </footer>

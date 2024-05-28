@@ -47,72 +47,18 @@
         <section class="container" id="Dailynews">
             <div class="page active" id="page-1">
                 <div class="row g-4 mx-auto p-5">
+                    @foreach($beritas as $berita)
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
-                            <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
+                            <img src="{{ Storage::url($berita->image) }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
-                                    Obor.</h6>
+                                <h6 class="card-title">{{ $berita->title }}</h6>
                                 <br>
                                 <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
-                                    Obor.</h6>
-                                <br>
-                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
-                                    Obor.</h6>
-                                <br>
-                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
-                                    Obor.</h6>
-                                <br>
-                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
-                                    Obor.</h6>
-                                <br>
-                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-stretch">
-                        <div class="card flex-fill">
-                            <img src="asset/img/berita2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h6 class="card-title">Memeriahkan Tahun Baru Islam Ponpes AR-RISALAH Mengadakan Pawai
-                                    Obor.</h6>
-                                <br>
-                                <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                     <!-- Add more cards here for page 1 -->
                 </div>
             </div>
