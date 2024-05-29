@@ -180,9 +180,9 @@
         <small class="card-text-center col-md-5 float-md-end mb-3 ms-md-6 mt-5">Sekolah Menengah Pertama Ar-Risalah adalah Lembaga <br> Pendidikan Menengah formal terdepan yang mencetak <br>cendikia muslim berkarakter islami dan berwawasan <br>internasional. SMP Ar-Risalah meciptakan suasana <br> pembelajaran yang aktif, inovatif, efektif, kreatif, dan <br>menyenangkan (PAIKEM) tanpa takut salah dan <br>demokratis. SMP Ar-Risalah juga mewujudkan suasana <br>pergaulan sehari  hari yang berlandaskan kekeluargaan,<br> keimanan, dan ketakwaan. SMP Ar-Risalah membentuk <br>siswa yang aktif berbahasa Indonesia yang benar, serta <br> berkepribadian Islam sesuai pemahaman dan pengalaman <br> generasi yang berakhlak mulia.</small>
       </div>
     </div>
-    <div class="countainer text-center mt-4">
-      <h3><span style="color: #00763A;">Mengapa Memilih SMP Ar-Risalah?</h3>
-      <div class="container mt-4">
+    <div class="countainer text-center mt-5">
+      <h3><span style="color: #00763A;">Mengapa Memilih SMP</span> Ar-Risalah?</h3>
+      <div class="container mt-5">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
             <div class="card" style="height: 20rem;">
@@ -248,7 +248,7 @@
         </div>
       </div>
     </div>
-    <div class="card text-bg-dark text-center mt-4">
+    <div class="card text-bg-dark text-center mt-5">
       <img src="asset/img/home3.jpg" class="card-img" alt="..." style="height: 400px;">
       <div class="overlay"></div>
       <div class="card-img-overlay">
@@ -263,9 +263,9 @@
         </button>
       </div>
     </div>
-    <h3 class="text-center mt-3"><span class="border-bottom border-2 border-black"><span
+    <h3 class="text-center mt-5"><span class="border-bottom border-2 border-black"><span
           style="color: #00763A;">Dokumentasi</span> Kegiatan</span></h3>
-    <div class="container">
+    <div class="container mt-5">
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -346,9 +346,9 @@
         </button>
       </div>
     </div>
-    <hr class="mt-4">
-    <h3 class="text-center" style="color: #00763A;">Partner Kami</h3>
-    <div class="container">
+    <hr class="mt-5">
+    <h3 class="text-center mt-5" style="color: #00763A;">Partner Kami</h3>
+    <div class="container mt-5">
       <div id="carouselExampleIndicatorss" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="0" class="active"
