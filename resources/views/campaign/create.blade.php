@@ -36,7 +36,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Campaign Name</label>
-                        <input type="text" class="form-control" id="title" name="title" required>
+                        <textarea  class="form-control" id="title" name="title" required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>

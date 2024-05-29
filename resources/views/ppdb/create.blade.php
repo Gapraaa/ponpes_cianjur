@@ -25,7 +25,7 @@
                     <h2>Formulir Pendaftaran Peserta Didik Baru (PPDB)</h2>
                     <div class="card form-container mb-5">
                         <div class="card-body">
-                            <form action="{{ route('ppdb.store')}}" method="POST">
+                            <form id="ppdbForm">
                                 @csrf
                                 <h3>DATA PESERTA DIDIK</h3>
                                 <div class="mb-3">
@@ -141,9 +141,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#ppdbForm').on('submit', function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    type: 'POST',
+                    url: "{{ route('ppdb.store') }}",
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        alert('Formulir berhasil dikirim!');
+                        // Reset form setelah pengiriman sukses
+                        $('#ppdbForm')[0].reset();
+                    },
+                    error: function(error) {
+                        alert('Terjadi kesalahan. Silakan coba lagi.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

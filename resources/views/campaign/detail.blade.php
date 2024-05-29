@@ -42,7 +42,9 @@
                             <div class="button-group" style="text-align: right;">
                                 <button type="button" class="btn btn-primary btn-lg mt-3" style="background-color: #1D3EB3;">
                                     <a href="#" class="text-white text-decoration-none">
-                                        <i class="fas fa-share-alt"></i> Bagikan
+                                        <svg width="20" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26.25 32.0833C25.0347 32.0833 24.0017 31.658 23.151 30.8073C22.3003 29.9566 21.875 28.9236 21.875 27.7083C21.875 27.5382 21.8872 27.3617 21.9115 27.1789C21.9358 26.9962 21.9722 26.8323 22.0208 26.6875L11.7396 20.7083C11.3264 21.0729 10.8646 21.3587 10.3542 21.5658C9.84375 21.7729 9.30903 21.876 8.75 21.875C7.53472 21.875 6.50174 21.4496 5.65104 20.5989C4.80035 19.7483 4.375 18.7153 4.375 17.5C4.375 16.2847 4.80035 15.2517 5.65104 14.401C6.50174 13.5503 7.53472 13.125 8.75 13.125C9.30903 13.125 9.84375 13.2285 10.3542 13.4356C10.8646 13.6427 11.3264 13.928 11.7396 14.2917L22.0208 8.31249C21.9722 8.16666 21.9358 8.00284 21.9115 7.82103C21.8872 7.63923 21.875 7.46277 21.875 7.29166C21.875 6.07638 22.3003 5.04339 23.151 4.1927C24.0017 3.342 25.0347 2.91666 26.25 2.91666C27.4653 2.91666 28.4983 3.342 29.349 4.1927C30.1997 5.04339 30.625 6.07638 30.625 7.29166C30.625 8.50693 30.1997 9.53992 29.349 10.3906C28.4983 11.2413 27.4653 11.6667 26.25 11.6667C25.691 11.6667 25.1562 11.5636 24.6458 11.3575C24.1354 11.1514 23.6736 10.8655 23.2604 10.5L12.9792 16.4792C13.0278 16.625 13.0642 16.7893 13.0885 16.9721C13.1128 17.1549 13.125 17.3308 13.125 17.5C13.125 17.6692 13.1128 17.8456 13.0885 18.0294C13.0642 18.2131 13.0278 18.3769 12.9792 18.5208L23.2604 24.5C23.6736 24.1354 24.1354 23.8501 24.6458 23.6439C25.1562 23.4378 25.691 23.3343 26.25 23.3333C27.4653 23.3333 28.4983 23.7587 29.349 24.6094C30.1997 25.4601 30.625 26.493 30.625 27.7083C30.625 28.9236 30.1997 29.9566 29.349 30.8073C28.4983 31.658 27.4653 32.0833 26.25 32.0833Z" fill="white"/>
+                                        </svg>Bagikan
                                     </a>
                                 </button>
                                 <button type="button" class="btn btn-success btn-lg mt-3">
@@ -92,31 +94,102 @@
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <!-- Add more indicators as needed -->
+                        <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
-                        @foreach ($donations->chunk(3) as $donationChunk)
-                        <div class="carousel-item @if($loop->first) active @endif">
+                        <div class="carousel-item active">
                             <div class="row">
-                                @foreach ($donationChunk as $donation)
                                 <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="{{ asset('asset/img/profileorangbaik.jpg')}}"
+                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
                                             class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
                                             style="width: 100px; height: 100px; object-fit: cover;">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title">{{ $donation->nama_lengkap}}</h5>
-                                            <p class="card-text">Berdonasi Sebesar</p>
-                                            <p class="card-text"><b>Rp. {{ number_format($donation->nominal_donasi, 0, ',', '.') }}</b></p>
-                                            <p class="card-text">{{ $donation->created_at->format('d M Y') }}</p>
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">Orang Baik</h5>
+                                            <p class="card-text text-center">Berdonasi Sebesar</p>
+                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
+                                            <p class="card-text text-center">2 menit yang lalu</p>
                                         </div>
                                     </div>
+    
                                 </div>
-                                @endforeach
+                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
+                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
+                                            style="width: 100px; height: 100px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">Orang Baik</h5>
+                                            <p class="card-text text-center">Berdonasi Sebesar</p>
+                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
+                                            <p class="card-text text-center">2 menit yang lalu</p>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
+                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
+                                            style="width: 100px; height: 100px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">Orang Baik</h5>
+                                            <p class="card-text text-center">Berdonasi Sebesar</p>
+                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
+                                            <p class="card-text text-center">2 menit yang lalu</p>
+                                        </div>
+                                    </div>
+    
+                                </div>
                             </div>
                         </div>
-                        @endforeach
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
+                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
+                                            style="width: 100px; height: 100px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">Orang Baik</h5>
+                                            <p class="card-text text-center">Berdonasi Sebesar</p>
+                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
+                                            <p class="card-text text-center">2 menit yang lalu</p>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
+                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
+                                            style="width: 100px; height: 100px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">Orang Baik</h5>
+                                            <p class="card-text text-center">Berdonasi Sebesar</p>
+                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
+                                            <p class="card-text text-center">2 menit yang lalu</p>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
+                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
+                                            style="width: 100px; height: 100px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">Orang Baik</h5>
+                                            <p class="card-text text-center">Berdonasi Sebesar</p>
+                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
+                                            <p class="card-text text-center">2 menit yang lalu</p>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider"
                         data-bs-slide="prev">

@@ -30,8 +30,8 @@
             <!-- /.row -->
             <!-- Main row -->
             <div class="container">
-                <h1>Berita</h1>
-                <a href="{{ route('gallery.create') }}" class="btn btn-primary mb-3">Create Berita Baru</a>
+                <h1>Gallery</h1>
+                <a href="{{ route('gallery.create') }}" class="btn btn-primary mb-3">Create Gallery Baru</a>
             
                 <table class="table">
                     <thead>
@@ -42,6 +42,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @isset($gallerys)
                         @foreach($gallerys as $gallery)
                             <tr>
                                 <td>{{ $gallery->id }}</td>
@@ -57,6 +58,7 @@
                                 </td>
                             </tr>
                         @endforeach
+                        @endisset
                     </tbody>
                 </table>
             </div>

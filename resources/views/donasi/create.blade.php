@@ -62,30 +62,30 @@
                 <img src="{{ Storage::url($campaign->image) }}" class="card-img" style="max-height: 500px; margin: 0 auto;" alt="Donasi">
             </div>
         </section>
-        <div class="container">
+        <div class="container mt-3">
             <div class="row">
                 <div class="col-10 mx-auto mt-3">
-                    <h3>{{ $campaign->title}}</h3>
+                    <h2>{{ $campaign->title}}</h2>
                 </div>
             </div>
         </div>
-        <hr>
-        <div class="container">
+        <hr class="mt-3">
+        <div class="container mt-5">
             <div class="row">
                 <div class="col-10 mx-auto">
                     <form action="{{ route('donation.store', $campaign) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <h5 for="nominal_donasi" class="form-label">Nominal Donasi</h5>
+                            <h5 for="nominal_donasi" class="form-label"><strong>Isi Nominal Donasi</strong></h5>
                             <div class="input-group input-group-lg mb-3 mt-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
                                 <input type="number" step="0.01" class="form-control" id="nominal_donasi" name="nominal_donasi" required>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <h5 for="bukti_donasi" class="form-label">Bukti Donasi</h5>
+                            {{-- <h5 for="bukti_donasi" class="form-label">Bukti Donasi</h5> --}}
                             <div class="input-group input-group-lg mb-3">
-                                <input type="file" class="form-control" id="bukti_donasi" name="bukti_donasi">
+                                <input type="file" class="form-control" id="bukti_donasi" name="bukti_donasi" placeholder="Bukti Pembayaran">
                                 <label class="input-group-text" for="bukti_donasi">
                                     <svg width="30" height="30" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M24.9167 36.4167C24.9167 37.7583 25.1658 39.0425 25.5875 40.25H9.58333C8.56667 40.25 7.59165 39.8461 6.87276 39.1272C6.15387 38.4084 5.75 37.4333 5.75 36.4167V9.58333C5.75 7.475 7.475 5.75 9.58333 5.75H36.4167C37.4333 5.75 38.4084 6.15387 39.1272 6.87276C39.8461 7.59165 40.25 8.56667 40.25 9.58333V25.5875C39.0425 25.1658 37.7583 24.9167 36.4167 24.9167V9.58333H9.58333V36.4167H24.9167ZM26.7567 23.5558L21.4858 30.3408L17.7292 25.8175L12.4583 32.5833H25.5875C26.3542 30.4367 27.7342 28.5775 29.5167 27.2358L26.7567 23.5558ZM38.3333 34.5V28.75H34.5V34.5H28.75V38.3333H34.5V44.0833H38.3333V38.3333H44.0833V34.5H38.3333Z" fill="black" />
@@ -95,12 +95,12 @@
                         </div>
                         <hr>
                         <div class="mb-3">
-                            <h5 for="nama_lengkap" class="form-label">Nama Lengkap</h5>
-                            <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
+                            <h5 for="nama_lengkap" class="form-label">Masuk atau Lengkapi data dibawah ini</h5>
+                            <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" required>
                         </div>
                         <div class="mb-3">
-                            <h5 for="phone_email" class="form-label">Phone/Email</h5>
-                            <input type="text" class="form-control" id="phone_email" name="phone_email" required>
+                            {{-- <h5 for="phone_email" class="form-label">Phone/Email</h5> --}}
+                            <input type="text" class="form-control" id="phone_email" name="phone_email" placeholder="Nomor Ponsel Atau Email" required>
                         </div>
                         <hr>
                         <div class="mb-3">
