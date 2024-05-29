@@ -67,32 +67,7 @@
             </section>
         </section>
     </main>
-    <footer class="text-white pt-5 pb-5" style="background-color: #00763a;">
-        <div class="container">
-            <div class="row pb-3">
-                <div class="col-md-4">
-                    <h5>Pondok Pesantren Ar-Risalah Safi’iyah</h5>
-                    <p><b>Alamat</b>: Kp.Paseban RT / RW 07 / 01, Desa Hegarmanah, Kecamatan Sukaluyu, Kabupaten Cianjur</p>
-                </div>
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4 d-flex flex-column align-items-end">
-                    <ul class="list-unstyled mb-2">
-                        <li><i class="fas fa-phone-alt font-sans"> </i> 081214192627</li>
-                    </ul>
-                    <div class="mx-0">
-                        <a href="#" class="text-white mr-1"><h5 class="fab fa-facebook"></h5></a>
-                        <a href="#" class="text-white mr-1"><h5 class="fab fa-instagram"></h5></a>
-                        <a href="#" class="text-white mr-1"><h5 class="fab fa-whatsapp"></h5></a>
-                        <a href="#" class="text-white mr-1"><h5 class="fab fa-youtube"></h5></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-3 bg-white">
-            <div class="row">
-            </div>
-        </div>
-    </footer>
+    @include('footer')
     <!-- Image Modal -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

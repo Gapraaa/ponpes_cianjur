@@ -205,32 +205,7 @@
             </div>
         </div>
     </main>
-    <footer class="text-white pt-5 pb-5" style="background-color: #00763a;">
-        <div class="container">
-            <div class="row pb-3">
-                <div class="col-md-4">
-                    <h5>Pondok Pesantren Ar-Risalah Safi’iyah</h5>
-                    <p><b>Alamat</b>: Kp.Paseban RT / RW 07 / 01, Desa Hegarmanah,  Kecamatan Sukaluyu,  Kabupaten Cianjur</p>
-                </div>
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4 d-flex flex-column align-items-end">
-                    <ul class="list-unstyled mb-2">
-                        <li><i class="fas fa-phone-alt font-sans"> </i>   081214192627</li>
-                    </ul>
-                    <div class="mx-0">
-                        <a href="#" class="text-white mr-1"><h5 class="fab fa-facebook"></h5></a>
-                        <a href="#" class="text-white mr-1"><h5 class="fab fa-instagram"></h5></a>
-                        <a href="#" class="text-white mr-1"><h5 class="fab fa-whatsapp"></h5></a>
-                        <a href="#" class="text-white mr-1"><h5 class="fab fa-youtube"></h5></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-3 bg-white">
-            <div class="row">
-            </div>
-        </div>
-    </footer>
+    @include('footer')
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz4fnFO9gybBogGzOg6nv/nu5R3LrC8jjV+0FQ1KpC1i1TVVQ0sKTAtGf9" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
