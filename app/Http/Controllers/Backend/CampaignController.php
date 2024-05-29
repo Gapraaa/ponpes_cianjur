@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
 use App\Models\Campaign;
 use App\Models\Donation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
 
 class CampaignController extends Controller
 {
@@ -65,13 +66,6 @@ class CampaignController extends Controller
         return redirect()->route('campaign.index')->with('success', 'Campaign updated successfully.');
     }
 
-
-    public function show()
-    {
-        $campaigns = Campaign::all(); // Retrieve all campaigns
-        return view('campaign.show', compact('campaigns'));
-    }
-
     public function destroy($id)
     {
         $campaign = Campaign::findOrFail($id);
@@ -80,18 +74,5 @@ class CampaignController extends Controller
         return redirect()->route('campaign.index')->with('success', 'Campaign deleted successfully.');
     }
 
-    public function detail($id)
-    {
-        // Find the campaign by its ID
-        $campaign = Campaign::findOrFail($id);
-        $donations = Donation::all();
-
-        // If the campaign is not found, return a 404 error
-        if (!$campaign) {
-            abort(404, 'Campaign not found');
-        }
-
-        // Pass the campaign data to the view
-        return view('campaign.detail', compact('campaign', 'donations'));
-    }
+    
 }

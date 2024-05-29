@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
@@ -37,11 +38,6 @@ class GalleryController extends Controller
 
     }
 
-    public function show()
-    {
-        $gallerys = Gallery::paginate(9);
-        return view('gallery.show', compact('gallerys'));
-    }
 
     public function destroy( $id)
     {

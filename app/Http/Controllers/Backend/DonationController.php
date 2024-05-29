@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
 use App\Models\Donation;
 use App\Models\Campaign;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DonationController extends Controller
 {
@@ -12,11 +13,6 @@ class DonationController extends Controller
     {
         $donations = Donation::all();
         return view('donasi.index', compact('donations'));
-    }
-
-    public function create(Campaign $campaign)
-    {
-        return view('donasi.create', compact('campaign'));
     }
 
     public function store(Request $request, Campaign $campaign)
