@@ -55,10 +55,10 @@ Route::get('/mdta', function () {
 Route::get('/ppdb/create', [FrontendPpdbController::class, 'create'])->name('ppdb.create');
 
 Route::get('campaign/{campaign}/donation/create', [FrontendDonationController::class, 'create'])->name('donation.create');
-Route::post('campaign/{campaign}/donation', [FrontendDonationController::class, 'store'])->name('donation.store');
+
 
 route::get('/campaign/show', [FrontendCampaignController::class, 'show'])->name('campaign.show');
-Route::get('/campaign/{id}', [FrontendCampaignController::class, 'detail'])->name('campaign.detail');
+Route::get('/campaign/detail/{id}', [FrontendCampaignController::class, 'detail'])->name('campaign.detail');
 
 Route::get('/berita/show', [FrontendBeritaController::class, 'show'])->name('berita.show');
 
@@ -73,6 +73,7 @@ Route::prefix('admin')->group(function () {
     Route::post('/donation/{donation}/accept', [BackendDonationController::class, 'accept'])->name('donation.accept');
     Route::post('/donation/{donation}/reject', [BackendDonationController::class, 'reject'])->name('donation.reject');
     Route::delete('/donations/{donation}', [BackendDonationController::class, 'destroy'])->name('donation.destroy');
+    Route::post('campaign/{campaign}/donation', [BackendDonationController::class, 'store'])->name('donation.store');
 
     Route::get('/gallery/index', [BackendGalleryController::class, 'index'])->name('gallery.index');
     Route::get('/gallery/create', [BackendGalleryController::class, 'create'])->name('gallery.create');
