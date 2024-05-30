@@ -9,6 +9,16 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="asset/style.css" rel="stylesheet" />
+    <style>
+        .carousel-caption {
+            z-index: 2;
+            position: absolute;
+            top: 33%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,12 +27,17 @@
 
     <main>
         <img src="{{ asset('asset/img/ppdb1.jpg') }}" class="d-block w-100" alt="..." />
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <h2>Penerimaan Peserta Didik Baru</h2>
+            <hr class="col-5 mx-auto border border-light opacity-100 border-2">
+            <h2>Tahun Ajaran 2024/2025</h2>
+        </div>
         <div class="container mt-5">
 
             <div class="row justify-content-center">
 
                 <div class="col-md-8 col-lg-10">
-                    <h2>Formulir Pendaftaran Peserta Didik Baru (PPDB)</h2>
+                    <h2 class="mb-5">Formulir Pendaftaran Peserta Didik Baru (PPDB)</h2>
                     <div class="card form-container mb-5">
                         <div class="card-body">
                             <form id="ppdbForm">
@@ -102,7 +117,7 @@
                                     </div>
                                 </div>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button type="submit" class="btn btn-success">Kirim</button>
+                                    <button type="submit" class="col-lg-2 btn btn-success btn-lg fs-5 ">Kirim</button>
                                 </div>
                             </form>
                         </div>

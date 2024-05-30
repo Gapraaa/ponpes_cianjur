@@ -50,25 +50,25 @@
                 <div class="carousel-item active">
                     <img src="{{ asset ('asset/img/home1.jpg')}}" class="d-block w-100" alt="...">
                     <div class="overlay"></div>
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h4>Ponpes Modern Ar-Risalah Syafi’iyyah</h4>
-                        <p>Unggul, Berbudi Tinggi, Berpengetahuan Luas</p>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center pb-5">
+                        <h3>Ponpes Modern Ar-Risalah Syafi’iyyah</h3>
+                        <h5>Unggul, Berbudi Tinggi, Berpengetahuan Luas</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset ('asset/img/home2.jpg')}}" class="d-block w-100" alt="...">
                     <div class="overlay"></div>
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h4>Ponpes Modern Ar-Risalah Syafi’iyyah</h4>
-                        <p>Unggul, Berbudi Tinggi, Berpengetahuan Luas</p>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center pb-5">
+                        <h3>Ponpes Modern Ar-Risalah Syafi’iyyah</h3>
+                        <h5>Unggul, Berbudi Tinggi, Berpengetahuan Luas</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset ('asset/img/home3.jpg')}}" class="d-block w-100" alt="...">
                     <div class="overlay"></div>
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h4>Ponpes Modern Ar-Risalah Syafi’iyyah</h4>
-                        <p>Unggul, Berbudi Tinggi, Berpengetahuan Luas</p>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center pb-5">
+                        <h3>Ponpes Modern Ar-Risalah Syafi’iyyah</h3>
+                        <h5>Unggul, Berbudi Tinggi, Berpengetahuan Luas</h5>
                     </div>
                 </div>
             </div>
@@ -103,12 +103,13 @@
             </div>
         </div>
         <div class="countainer col-10 mx-auto mb-5 text-center mt-4">
-            <h4>Our Program</h4>
+            <h5 class="mt-5 mb-4">Our Program</h5>
             <h3><span style="color: #00763A;">Pendidikan</span> Berbasis Tauhid</h3>
+            <hr class="col-1 mx-auto border border-dark opacity-100 border-2 mt-4">
             <div class="container mt-4">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
                     <div class="col">
-                        <div class="card" style="height: 23rem;">
+                        <div class="card" style="height: 25rem;">
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
                                     <svg width="81" height="81" viewBox="0 0 81 81" fill="none"
@@ -120,17 +121,17 @@
                                             d="M30.375 20.25H37.125V27H30.375V20.25ZM43.875 20.25H50.625V27H43.875V20.25ZM30.375 33.75H37.125V40.5H30.375V33.75ZM43.875 33.75H50.625V40.5H43.875V33.75Z"
                                             fill="#1E1E1E" />
                                     </svg>
-                                    <h3>Boarding School</h3>
-                                    <p>Program yang diperuntukkan bagi santri yang ingin focus pendidikan formal serta
+                                    <h3 class="mt-3 mb-3">Boarding School</h3>
+                                    <h6>Program yang diperuntukkan bagi santri yang ingin focus pendidikan formal serta
                                         mendapatkan hafalan
                                         Quran dengan model belajar full day school. Target hafalan 8 juz dalam 3 tahun.
-                                    </p>
+                                    </h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card" style="background-color: #00763A; height: 23rem; color: #FFFFFF;">
+                        <div class="card" style="background-color: #00763A; height: 25rem; color: #FFFFFF;">
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
                                     <svg width="71" height="81" viewBox="0 0 71 81" fill="none"
@@ -146,16 +147,16 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <h3>Takhassus</h3>
-                                    <p>Program khusus tahfidz Quran sebagai program Ponpes Modern Ar-Risalah Syafi’iyyah
+                                    <h3 class="mt-3 mb-3">Takhassus</h3>
+                                    <h6>Program khusus tahfidz Quran sebagai program Ponpes Modern Ar-Risalah Syafi’iyyah
                                         dengan target
-                                        hafalan 20 – 30 juz.</p>
+                                        hafalan 20 – 30 juz.</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card" style="height: 23rem;">
+                        <div class="card" style="height: 25rem;">
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
                                     <svg width="95" height="81" viewBox="0 0 95 81" fill="none"
@@ -171,10 +172,10 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <h3>Full Day School</h3>
-                                    <p>Program kelas regular tidak berasrama dan tetap mendapatkan muatan keilmuan
+                                    <h3 class="mt-3 mb-3">Full Day School</h3>
+                                    <h6>Program kelas regular tidak berasrama dan tetap mendapatkan muatan keilmuan
                                         Tsaqofah Islamiyah.
-                                        Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</p>
+                                        Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</h6>
                                 </div>
                             </div>
                         </div>
@@ -183,13 +184,14 @@
             </div>
         </div>
         <div class="card text-bg-dark mt-4">
-            <img src="{{ asset ('asset/img/homebg2.jpg')}}" class="card-img" alt="..." style="height: 400px;">
+            <img src="{{ asset ('asset/img/homebg2.jpg')}}" class="card-img" alt="..." style="height: 625px;">
             <div class="card-img-overlay">
-                <h3 class="card-title text-center">Selayang Pandang</h3>
-                <div class="card col-md-6 float-md-end mb-3 ms-md-3 m-5" style="width: 30rem;">
+                <h3 class="card-title text-center mt-3">Selayang Pandang</h3>
+                <hr class="col-1 mx-auto border border-light opacity-100 border-2 mt-5 mb-5">
+                <div class="card col-md-2 float-md-end mb-3 ms-md-3 m-5" style="width: 30rem;">
                     <img src="{{ asset ('asset/img/home2.jpg')}}" class="card-img-top" alt="...">
                 </div>
-                <small class="card-text-center col-md-5 float-md-end mb-3 ms-md-6 m-5">Ponpes Modern Ar-Risalah
+                <h5 class="card-text-center col-md-6 float-md-end mb-3 ms-md-6 m-5">Ponpes Modern Ar-Risalah
                     Syafi’iyyah
                     adalah organisasi yang bergerak dalam <br> bidang Sosial, Pendidikan dan Keagamaan untuk memberikan
                     nilai <br>
@@ -203,12 +205,12 @@
                     <br>
                     bersosialisasi untuk menumbuhkan karakter terpuji <br> yang dilandasi pada ajaran Agama Islam,
                     seperti
-                    memiliki <br> rasa percaya diri, mandiri, saling menghargai, dan mempunyai jiwa sosial.</small>
+                    memiliki <br> rasa percaya diri, mandiri, saling menghargai, dan mempunyai jiwa sosial.</h5>
             </div>
         </div>
         <div class="countainer text-center mt-5">
             <h3><span style="color: #00763A;">Mengapa Memilih</span> Ponpes Modern Ar-Risalah Syafi’iyyah?</h3>
-            <div class="container mt-5">
+            <div class="col-10 g-5 mx-auto container mt-5">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card" style="height: 20rem;">
@@ -220,12 +222,12 @@
                                             d="M70.995 56.7V4.05C70.995 1.51875 69.4738 0 66.9385 0H15.2175C6.59732 0 0.00543213 6.58125 0.00543213 15.1875V65.8125C0.00543213 74.4187 6.59732 81 15.2175 81H66.9385C68.9668 81 70.995 79.4812 70.995 76.95V74.4187C70.995 73.4062 70.488 72.3938 69.4738 71.3812C68.9668 68.85 68.9668 61.7625 69.4738 59.7375C70.488 59.2313 70.995 58.2188 70.995 56.7ZM47.7142 23.0692C47.8093 22.8778 47.9931 22.7812 48.1769 22.7812C48.3608 22.7812 48.5446 22.8778 48.6396 23.0692L50.4112 26.6525L54.3727 27.2268C54.7958 27.2885 54.9653 27.8074 54.6595 28.1064L51.793 30.8955L52.4696 34.8332C52.5266 35.167 52.262 35.4375 51.9609 35.4375C51.8817 35.4375 51.7993 35.4185 51.7201 35.3774L48.1769 33.5185L44.6338 35.3774C44.5546 35.4185 44.4722 35.4375 44.3929 35.4375C44.0919 35.4375 43.8272 35.167 43.8843 34.8332L44.5609 30.8955L41.6944 28.1064C41.387 27.8074 41.5565 27.2885 41.9812 27.2268L45.9411 26.6525L47.7142 23.0692ZM38.5411 12.1516C40.7072 12.1516 42.8606 12.5455 44.9396 13.3239C45.0968 13.324 45.252 13.3585 45.3943 13.4251C45.5366 13.4916 45.6625 13.5886 45.7632 13.709C45.8639 13.8295 45.9368 13.9706 45.9769 14.1223C46.017 14.274 46.0232 14.4326 45.9952 14.587C45.9671 14.7414 45.9055 14.8877 45.8146 15.0157C45.7237 15.1437 45.6057 15.2502 45.4691 15.3277C45.3325 15.4052 45.1805 15.4517 45.0238 15.4642C44.8671 15.4766 44.7097 15.4545 44.5625 15.3995C44.4563 15.3995 44.0729 15.3663 43.9081 15.3663C35.6191 15.3663 28.8766 22.0978 28.8766 30.3734C28.8766 38.6474 35.6191 45.3806 43.9081 45.3806C44.0713 45.3806 44.4595 45.3473 44.5625 45.3473C45.1852 45.3473 45.64 45.8441 45.64 46.42C45.64 46.8914 45.3326 47.2917 44.9079 47.4356C42.8369 48.2061 40.6945 48.5968 38.5395 48.5968C28.4757 48.5984 20.2882 40.4225 20.2882 30.375C20.2882 20.3259 28.4757 12.1516 38.5411 12.1516ZM60.3466 70.875H15.2175C12.1751 70.875 10.1468 68.85 10.1468 65.8125C10.1468 62.775 12.6821 60.75 15.2175 60.75H60.3466V70.875Z"
                                             fill="#00763A" />
                                     </svg>
-                                    <h3 class="mt-2" style="color: #00763A;">Boarding School</h3>
-                                    <p class="mt-2">Program yang diperuntukkan bagi santri yang ingin focus
+                                    <h3 class="mt-2 mb-3" style="color: #00763A;">Boarding School</h3>
+                                    <h6 class="mt-2">Program yang diperuntukkan bagi santri yang ingin focus
                                         pendidikan formal serta
                                         mendapatkan hafalan Quran dengan model belajar full day school. Target hafalan 8
                                         juz dalam 3 tahun.
-                                    </p>
+                                    </h6>
                                 </div>
                             </div>
                         </div>
@@ -253,10 +255,10 @@
                                             <path d="M0 0H71V71H0V0Z" fill="#00763A" />
                                         </g>
                                     </svg>
-                                    <h3 class="mt-2" style="color: #00763A;">Takhassus</h3>
-                                    <p class="mt-2">Program khusus tahfidz Quran sebagai program Ponpes Modern
+                                    <h3 class="mt-2 mb-3" style="color: #00763A;">Takhassus</h3>
+                                    <h6 class="mt-2">Program khusus tahfidz Quran sebagai program Ponpes Modern
                                         Ar-Risalah Syafi’iyyah
-                                        dengan target hafalan 20 – 30 juz.</p>
+                                        dengan target hafalan 20 – 30 juz.</h6>
                                 </div>
                             </div>
                         </div>
@@ -274,10 +276,10 @@
                                             d="M28.5759 34.98L43.9218 17.6147C44.2839 17.2049 44.7064 17 45.1893 17C45.6721 17 46.0946 17.2049 46.4568 17.6147C46.8189 18.0245 47 18.5115 47 19.0756C47 19.6398 46.8189 20.1261 46.4568 20.5345L29.8434 39.3853C29.4813 39.7951 29.0588 40 28.5759 40C28.0931 40 27.6706 39.7951 27.3084 39.3853L19.5223 30.5746C19.1602 30.1648 18.9863 29.6785 19.0008 29.1157C19.0153 28.5529 19.2042 28.066 19.5676 27.6548C19.9309 27.2436 20.3613 27.0387 20.8586 27.0401C21.356 27.0415 21.7857 27.2464 22.1479 27.6548L28.5759 34.98Z"
                                             fill="#00763A" />
                                     </svg>
-                                    <h3 class="mt-2" style="color: #00763A;">Full Day School</h3>
-                                    <p class="mt-2">Program kelas regular tidak berasrama dan tetap mendapatkan
+                                    <h3 class="mt-2 mb-3" style="color: #00763A;">Full Day School</h3>
+                                    <h6 class="mt-2">Program kelas regular tidak berasrama dan tetap mendapatkan
                                         muatan keilmuan Tsaqofah
-                                        Islamiyah. Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</p>
+                                        Islamiyah. Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</h6>
                                 </div>
                             </div>
                         </div>
@@ -292,10 +294,10 @@
                                             d="M35.5 47.3333C33.1462 47.3333 30.8888 46.3983 29.2244 44.7339C27.56 43.0695 26.625 40.8121 26.625 38.4583C26.625 35.145 28.4296 32.2458 31.0625 30.7371L59.7879 14.1112L43.4283 42.4521C41.9492 45.3512 38.9613 47.3333 35.5 47.3333ZM35.5 8.875C40.8546 8.875 45.8542 10.3542 50.2029 12.78L43.9904 16.3596C41.4167 15.3538 38.4583 14.7917 35.5 14.7917C29.2232 14.7917 23.2035 17.2851 18.7651 21.7235C14.3268 26.1618 11.8333 32.1815 11.8333 38.4583C11.8333 44.9963 14.4663 50.9129 18.7558 55.1729H18.7854C19.9392 56.3267 19.9392 58.1904 18.7854 59.3442C17.6317 60.4979 15.7383 60.4979 14.5846 59.3737C11.8334 56.6302 9.65137 53.3702 8.16386 49.7809C6.67634 46.1915 5.91266 42.3437 5.91667 38.4583C5.91667 30.6123 9.03348 23.0877 14.5814 17.5398C20.1294 11.9918 27.654 8.875 35.5 8.875ZM65.0833 38.4583C65.0833 46.6233 61.77 54.0192 56.4154 59.3737C55.2617 60.4979 53.3979 60.4979 52.2442 59.3442C51.9699 59.0705 51.7523 58.7454 51.6039 58.3875C51.4554 58.0296 51.379 57.646 51.379 57.2585C51.379 56.8711 51.4554 56.4874 51.6039 56.1296C51.7523 55.7717 51.9699 55.4466 52.2442 55.1729C54.4443 52.9818 56.1887 50.3767 57.3769 47.5079C58.565 44.6391 59.1733 41.5634 59.1667 38.4583C59.1667 35.5 58.6046 32.5417 57.5692 29.8792L61.1488 23.6667C63.6042 28.1042 65.0833 33.0742 65.0833 38.4583Z"
                                             fill="#00763A" />
                                     </svg>
-                                    <h3 class="mt-2" style="color: #00763A;">Full Day School</h3>
-                                    <p class="mt-2">Program kelas regular tidak berasrama dan tetap mendapatkan
+                                    <h3 class="mt-2 mb-3" style="color: #00763A;">Full Day School</h3>
+                                    <h6 class="mt-2">Program kelas regular tidak berasrama dan tetap mendapatkan
                                         muatan keilmuan Tsaqofah
-                                        Islamiyah. Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</p>
+                                        Islamiyah. Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</h6>
                                 </div>
                             </div>
                         </div>
@@ -318,10 +320,10 @@
                                         </defs>
                                     </svg>
 
-                                    <h3 class="mt-2" style="color: #00763A;">Full Day School</h3>
-                                    <p class="mt-2">Program kelas regular tidak berasrama dan tetap mendapatkan
+                                    <h3 class="mt-2 mb-3" style="color: #00763A;">Full Day School</h3>
+                                    <h6 class="mt-2">Program kelas regular tidak berasrama dan tetap mendapatkan
                                         muatan keilmuan Tsaqofah
-                                        Islamiyah. Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</p>
+                                        Islamiyah. Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</h6>
                                 </div>
                             </div>
                         </div>
@@ -343,10 +345,10 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <h3 class="mt-2" style="color: #00763A;">Full Day School</h3>
-                                    <p class="mt-2">Program kelas regular tidak berasrama dan tetap mendapatkan
+                                    <h3 class="mt-2 mb-3" style="color: #00763A;">Full Day School</h3>
+                                    <h6 class="mt-2">Program kelas regular tidak berasrama dan tetap mendapatkan
                                         muatan keilmuan Tsaqofah
-                                        Islamiyah. Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</p>
+                                        Islamiyah. Hari efektif senin – jumat. Target hafalan 4 juz dalam 3 tahun.</h6>
                                 </div>
                             </div>
                         </div>
@@ -358,10 +360,10 @@
             <img src="{{ asset ('asset/img/home3.jpg')}}" class="card-img" alt="..." style="height: 400px;">
             <div class="overlay"></div>
             <div class="card-img-overlay">
-                <h2 class="card-title" style="padding-top: 10rem;">Pendaftaran Peserta Didik Baru</h2>
-                <p class="card-text">Kami mengundang putra terbaik Negeri untuk bergabung bersama SMA Integral Luqman
+                <h1 class="card-title mb-3" style="padding-top: 5rem;">Pendaftaran Peserta Didik Baru</h1>
+                <h5 class="card-text mb-4">Kami mengundang putra terbaik Negeri untuk bergabung bersama SMA Integral Luqman
                     al Hakim,
-                    Surabaya</p>
+                    Surabaya</h5>
                 <button type="button" class="btn btn-success p-2 mt-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor"
                         class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -371,8 +373,8 @@
                 </button>
             </div>
         </div>
-        <h3 class="text-center mt-5"><span class="border-bottom border-2 border-black"><span
-                    style="color: #00763A;">Dokumentasi</span> Kegiatan</span></h3>
+        <h3 class="text-center mt-5"><span style="color: #00763A;">Dokumentasi</span> Kegiatan</h3>
+        <hr class="col-1 mx-auto border border-dark opacity-100 border-2 mt-5 mb-5">
         <div class="container mt-5">
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
@@ -545,7 +547,39 @@
             </div>
         </div>
     </main>
-    @include('footer')
+    <footer class="text-white pt-5 pb-5" style="background-color: #00763a;">
+    <div class="container">
+        <div class="row pb-3">
+            <!-- Text Section -->
+            <div class="col-md-4 d-flex ">
+                <div>
+                    <h5>Pondok Pesantren Ar-Risalah Safi’iyah</h5>
+                    <p><b>Alamat</b>: Kp.Paseban RT / RW 07 / 01, Desa Hegarmanah,  Kecamatan Sukaluyu,  Kabupaten Cianjur</p>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="col-md-6 d-flex justify-content-center align-items-center ">
+                <div class="card mb-3" style="width: 24rem;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2283.6225033548085!2d106.83765918427203!3d-6.6397279109802945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c8bd0490a1f7%3A0xea6548df140cc716!2sGg.%20PD%20Hasan%20Jl.%20Muara%20No.118%2C%20RT.03%2FRW.01%2C%20Tajur%2C%20Kec.%20Bogor%20Tim.%2C%20Kota%20Bogor%2C%20Jawa%20Barat%2016145!5e0!3m2!1sid!2sid!4v1716963815304!5m2!1sid!2sid" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <!-- Social Media Section -->
+            <div class="col-md-2 d-flex flex-column align-items-end ">
+                <ul class="list-unstyled mb-2">
+                    <li><i class="fas fa-phone-alt"></i> 081214192627</li>
+                </ul>
+                <div class="mx-0">
+                    <a href="#" class="text-white mr-2"><h5 class="fab fa-facebook"></h5></a>
+                    <a href="#" class="text-white mr-2"><h5 class="fab fa-instagram"></h5></a>
+                    <a href="#" class="text-white mr-2"><h5 class="fab fa-whatsapp"></h5></a>
+                    <a href="#" class="text-white"><h5 class="fab fa-youtube"></h5></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-3 bg-white">
+    </div>
+</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>

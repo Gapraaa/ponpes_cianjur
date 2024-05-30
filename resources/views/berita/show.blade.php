@@ -8,6 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        .carousel-caption {
+            z-index: 2;
+            position: absolute;
+            top: 55%;
+            left: 18%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,13 +25,13 @@
     <main>
         <img src="{{ asset('asset/img/manasik.jpg') }}" class="d-block w-100 mt-5" style="color: #00763a4d" alt="..." />
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h2>Berita Hari Ini</h2>
+            <h1>Berita Hari Ini</h1>
         </div>
 
         <section id="thumbnail">
             <div class="card bg-dark text-white">
                 <div class="card-img-overlay">
-                    <h5 class="card-title text-white text-bold">Berita Hari Ini</h5>
+                    <h1 class="card-title text-white text-bold">Berita Hari Ini</h1>
                 </div>
             </div>
         </section>

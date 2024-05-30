@@ -20,8 +20,8 @@
         .carousel-caption {
             z-index: 2;
             position: absolute;
-            top: 55%;
-            left: 10%;
+            top: 48%;
+            left: 15%;
             transform: translate(-50%, -50%);
             text-align: center;
         }
@@ -33,7 +33,7 @@
     <main>
         <img src="{{ asset ('asset/img/gallery1.jpg')}}" class="d-block w-100 mt-5" alt="..." />
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h2>Gallery</h2>
+            <h1>Gallery</h1>
         </div>
 
         <section class="container" id="Dailynews">

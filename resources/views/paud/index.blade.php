@@ -29,6 +29,18 @@
       transform: translate(-50%, -50%);
       text-align: center;
     }
+
+.custom-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 118, 58, 0.75); /* Green color with 75% opacity */
+    z-index: 1;
+}
+
   </style>
 </head>
 
@@ -51,24 +63,24 @@
           <img src="{{ asset ('asset/img/home paud.jpg')}}" class="d-block w-100" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h3>Paud Ar-Risalah</h3>
-            <h5>Aktif, Kreatif, Efektif, dan Inovatif</h5>
+            <h1>Paud Ar-Risalah</h1>
+            <h4>Aktif, Kreatif, Efektif, dan Inovatif</h4>
           </div>
         </div>
         <div class="carousel-item">
           <img src="{{ asset ('asset/img/home2.jpg')}}" class="d-block w-100" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h3>Paud Ar-Risalah</h3>
-            <h5>Aktif, Kreatif, Efektif, dan Inovatif</h5>
+            <h1>Paud Ar-Risalah</h1>
+            <h4>Aktif, Kreatif, Efektif, dan Inovatif</h4>
           </div>
         </div>
         <div class="carousel-item">
           <img src="{{ asset ('asset/img/home3.jpg')}}" class="d-block w-100" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h3>Paud Ar-Risalah</h3>
-            <h5>Aktif, Kreatif, Efektif, dan Inovatif</h5>
+            <h1>Paud Ar-Risalah</h1>
+            <h4>Aktif, Kreatif, Efektif, dan Inovatif</h4>
           </div>
         </div>
       </div>
@@ -101,12 +113,13 @@
       </div>
     </div>
     <div class="countainer col-10 mx-auto mb-5 text-center mt-4">
-      <h5>Our Program</h5>
+      <h5 class="mt-5 mb-4">Our Program</h5>
       <h3><span style="color: #00763A;">Pendidikan</span> Berbasis Tauhid</h3>
-      <div class="container mt-4">
+      <hr class="col-1 mx-auto border border-dark opacity-100 border-2 mt-4">
+      <div class="container mt-5">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
           <div class="col">
-            <div class="card" style="height: 23rem;">
+            <div class="card" style="height: 25rem;">
               <div class="card-body">
                 <div class="justify-content-between align-items-center">
                   <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,15 +130,15 @@
                       d="M30.375 20.25H37.125V27H30.375V20.25ZM43.875 20.25H50.625V27H43.875V20.25ZM30.375 33.75H37.125V40.5H30.375V33.75ZM43.875 33.75H50.625V40.5H43.875V33.75Z"
                       fill="#1E1E1E" />
                   </svg>
-                  <h3>Visi</h3>
-                  <p>Membentuk anak yang cerdas, baik dan terampil berakhlak mulia, sholeh/sholihah sehingga terwujud
-                    anak yang kreatif dan mandiri.</p>
+                  <h3 class="mt-3 mb-3">Visi</h3>
+                  <h6>Membentuk anak yang cerdas, baik dan terampil berakhlak mulia, sholeh/sholihah sehingga terwujud
+                    anak yang kreatif dan mandiri.</h6>
                 </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card" style="background-color: #00763A; height: 23rem; color: #FFFFFF;">
+            <div class="card" style="background-color: #00763A; height: 25rem; color: #FFFFFF;">
               <div class="card-body">
                 <div class="justify-content-between align-items-center">
                   <svg width="71" height="81" viewBox="0 0 71 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,15 +153,15 @@
                       </clipPath>
                     </defs>
                   </svg>
-                  <h3>Misi</h3>
-                  <p>Melaksanakan pembelajaran aktif, kreatif, efektif dan inovatif dan Menyiapkan anak didik ke jenjang
-                    pendidikan dasar dengan ketercapaian Kompetensi Dasar sesuai tahapan perkembangan anak.</p>
+                  <h3 class="mt-3 mb-3">Misi</h3>
+                  <h6>Melaksanakan pembelajaran aktif, kreatif, efektif dan inovatif dan Menyiapkan anak didik ke jenjang
+                    pendidikan dasar dengan ketercapaian Kompetensi Dasar sesuai tahapan perkembangan anak.</h6>
                 </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card" style="height: 23rem;">
+            <div class="card" style="height: 25rem;">
               <div class="card-body">
                 <div class="justify-content-between align-items-center">
                   <svg width="95" height="81" viewBox="0 0 95 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,9 +176,9 @@
                       </clipPath>
                     </defs>
                   </svg>
-                  <h3>Tujuan</h3>
-                  <p>Mengembangkan kurikulum dan perangkat pembelajaran yang inovatif dan Meningkatnya profesionalisme
-                    tenaga pendidik dalam mengelola pendidikan yang menyenangkan dan berpotensi serta berkualitas.</p>
+                  <h3 class="mt-3 mb-3">Tujuan</h3>
+                  <h6>Mengembangkan kurikulum dan perangkat pembelajaran yang inovatif dan Meningkatnya profesionalisme
+                    tenaga pendidik dalam mengelola pendidikan yang menyenangkan dan berpotensi serta berkualitas.</h6>
                 </div>
               </div>
             </div>
@@ -174,24 +187,25 @@
       </div>
     </div>
     <div class="card text-bg-dark mt-4">
-      <img src="{{ asset ('asset/img/homebg2.jpg')}}" class="card-img" alt="..." style="height: 400px;">
+      <img src="{{ asset ('asset/img/homebg2.jpg')}}" class="card-img" alt="..." style="height: 625px;">
       <div class="card-img-overlay">
-        <h3 class="card-title text-center">Selayang Pandang</h3>
-        <div class="card col-md-6 float-md-end mb-3 ms-md-3 m-5 " style="width: 30rem;">
+        <h3 class="card-title text-center mt-3">Selayang Pandang</h3>
+        <hr class="col-1 mx-auto border border-light opacity-100 border-2 mt-5 mb-5">
+        <div class="card col-md-2 float-md-end mb-3 ms-md-3 m-5 " style="width: 30rem;">
           <img src="{{ asset ('asset/img/selayang pandang paud.jpg')}}" class="card-img-top" alt="...">
         </div>
-        <small class="card-text-center col-md-5 float-md-end mb-3 ms-md-6 m-5">Kami memberikan pelayanan pendidikan
+        <h4 class="card-text-center col-md-6 float-md-end mb-3 ms-md-6 m-5">Kami memberikan pelayanan pendidikan
           dengan sepenuh <br> hati kepada seluruh peserta didik, anak-anak yang kami <br> cintai sepenuh hati. PAUD
           Ar-Risalah adalah salah satu <br> wadah bermain dan belajar bagi anak-anak kita. PAUD Ar- <br>Risalah siap
           membantu para orang tua untuk <br> menyelamatkan “Usia Emas” putra putrinya.<br>
           Perencanaan pembelajaran pada program PAUD Ar-Risalah <br> Segedong sudah disusun dengan matang untuk <br>
           memberikan arah yang tepat dalam proses <br> pembelajarannya dengan mempertimbangkan <br> keseimbangan antara
-          pendidikan umum dan pendidikan <br> keagamaan.</small>
+          pendidikan umum dan pendidikan <br> keagamaan.</h4>
       </div>
     </div>
     <div class="countainer text-center mt-5">
       <h3><span style="color: #00763A;">Mengapa Memilih Paud</span> Ar-Risalah</h3>
-      <div class="container mt-5">
+      <div class="col-10 g-5 mx-auto container mt-5">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
             <div class="card" style="height: 20rem;">
@@ -209,7 +223,7 @@
                       </clipPath>
                     </defs>
                   </svg>
-                  <h3 class="mt-2" style="color: #00763A;">Program Billingual (Arab dan Inggris)</h3>
+                  <h4 class="mt-2 mb-3" style="color: #00763A;">Program Billingual (Arab dan Inggris)</h4>
                   <p class="mt-2">Pengembangan kemampuan bahasa Arab dan bahsa Inggris yang intensif di Sekolah.</p>
                 </div>
               </div>
@@ -224,7 +238,7 @@
                       d="M35.5 47.3333C33.1462 47.3333 30.8888 46.3983 29.2244 44.7339C27.56 43.0695 26.625 40.8121 26.625 38.4583C26.625 35.145 28.4296 32.2458 31.0625 30.7371L59.7879 14.1112L43.4283 42.4521C41.9492 45.3512 38.9613 47.3333 35.5 47.3333ZM35.5 8.875C40.8546 8.875 45.8542 10.3542 50.2029 12.78L43.9904 16.3596C41.4167 15.3538 38.4583 14.7917 35.5 14.7917C29.2232 14.7917 23.2035 17.2851 18.7651 21.7235C14.3268 26.1618 11.8333 32.1815 11.8333 38.4583C11.8333 44.9963 14.4663 50.9129 18.7558 55.1729H18.7854C19.9392 56.3267 19.9392 58.1904 18.7854 59.3442C17.6317 60.4979 15.7383 60.4979 14.5846 59.3737C11.8334 56.6302 9.65137 53.3702 8.16386 49.7809C6.67634 46.1915 5.91266 42.3437 5.91667 38.4583C5.91667 30.6123 9.03348 23.0877 14.5814 17.5398C20.1294 11.9918 27.654 8.875 35.5 8.875ZM65.0833 38.4583C65.0833 46.6233 61.77 54.0192 56.4154 59.3737C55.2617 60.4979 53.3979 60.4979 52.2442 59.3442C51.9699 59.0705 51.7523 58.7454 51.6039 58.3875C51.4554 58.0296 51.379 57.646 51.379 57.2585C51.379 56.8711 51.4554 56.4874 51.6039 56.1296C51.7523 55.7717 51.9699 55.4466 52.2442 55.1729C54.4443 52.9818 56.1887 50.3767 57.3769 47.5079C58.565 44.6391 59.1733 41.5634 59.1667 38.4583C59.1667 35.5 58.6046 32.5417 57.5692 29.8792L61.1488 23.6667C63.6042 28.1042 65.0833 33.0742 65.0833 38.4583Z"
                       fill="#00763A" />
                   </svg>
-                  <h3 class="mt-2" style="color: #00763A;">Pembinaan 4 Jam</h3>
+                  <h4 class="mt-2 mb-3" style="color: #00763A;">Pembinaan 4 Jam</h4>
                   <p class="mt-2">Siswa akan mendapatkan pendampingan bersama guru-guru berpengalaman selama
                     pembelajaran berlangsung di sekolah maupun diluar sekolah.</p>
                 </div>
@@ -243,7 +257,7 @@
                       d="M28.5759 34.98L43.9218 17.6147C44.2839 17.2049 44.7064 17 45.1893 17C45.6721 17 46.0946 17.2049 46.4568 17.6147C46.8189 18.0245 47 18.5115 47 19.0756C47 19.6398 46.8189 20.1261 46.4568 20.5345L29.8434 39.3853C29.4813 39.7951 29.0588 40 28.5759 40C28.0931 40 27.6706 39.7951 27.3084 39.3853L19.5223 30.5746C19.1602 30.1648 18.9863 29.6785 19.0008 29.1157C19.0153 28.5529 19.2042 28.066 19.5676 27.6548C19.9309 27.2436 20.3613 27.0387 20.8586 27.0401C21.356 27.0415 21.7857 27.2464 22.1479 27.6548L28.5759 34.98Z"
                       fill="#00763A" />
                   </svg>
-                  <h3 class="mt-2" style="color: #00763A;">Generasi Terwujud</h3>
+                  <h4 class="mt-2 mb-3 " style="color: #00763A;">Generasi Terwujud</h4>
                   <p class="mt-2">Terwujudnya generasi yang unggul menuju terbentuknya khaira ummah.</p>
                 </div>
               </div>
@@ -252,24 +266,24 @@
         </div>
       </div>
     </div>
-    <div class="card text-bg-dark text-center mt-5">
+    <div class="card text-bg-dark text-center mt-5" style="color: #00763A">
       <img src="{{ asset ('asset/img/home3.jpg')}}" class="card-img" alt="..." style="height: 400px;">
-      <div class="overlay"></div>
       <div class="card-img-overlay">
-        <h2 class="card-title" style="padding-top: 10rem;">Pendaftaran Peserta Didik Baru</h2>
-        <p class="card-text">PAUD Ar-Risalah siap membantu para orang tua untuk menyelamatkan “Usia Emas” putra putrinya
-        </p>
-        <button type="button" class="btn btn-success p-2 mt-3">
+        <h1 class="card-title mb-3" style="padding-top: 5rem;">PENDAFTARAN PESERTA DIDIK BARU</h1>
+        <h5 class="card-text mb-4">PAUD Ar-Risalah siap membantu para orang tua untuk menyelamatkan “Usia Emas” putra putrinya
+        </h5>
+        <button type="button" class="btn btn-success btn-lg p-2 m-2 mt-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-whatsapp"
             viewBox="0 0 16 16">
             <path
               d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-          </svg> Daftar Sekarang
+          </svg> Daftar Sekarang  
         </button>
       </div>
     </div>
-    <h3 class="text-center mt-5"><span class="border-bottom border-2 border-black"><span
-          style="color: #00763A;">Dokumentasi</span> Kegiatan</span></h3>
+    <h3 class="text-center mt-5"><span
+          style="color: #00763A;">Dokumentasi</span> Kegiatan</h3>
+          <hr class="col-1 mx-auto border border-dark opacity-100 border-2 mt-4">
     <div class="container mt-5">
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
