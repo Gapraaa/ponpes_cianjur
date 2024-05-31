@@ -140,116 +140,41 @@
             </div>
             <div id="cardSlider" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
+                    @foreach ($donations->where('status', 'accepted')->chunk(3) as $index => $chunk)
+                        <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}" aria-current="{{ $index == 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+                    @endforeach
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                        class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                        style="width: 100px; height: 100px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Orang Baik</h5>
-                                        <p class="card-text text-center">Berdonasi Sebesar</p>
-                                        <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                        <p class="card-text text-center">2 menit yang lalu</p>
+                    @foreach ($donations->where('status', 'accepted')->chunk(3) as $index => $chunk)
+                        <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                            <div class="row">
+                                @foreach ($chunk as $donation)
+                                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                                        <div class="card" style="width: 18rem;">
+                                            <img src="{{ asset('asset/img/profileorangbaik.jpg') }}" class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil" style="width: 100px; height: 100px; object-fit: cover;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center">{{ $donation->nama_lengkap }}</h5>
+                                                <p class="card-text text-center">Berdonasi Sebesar</p>
+                                                <p class="card-text text-center"><b>Rp. {{ number_format($donation->nominal_donasi, 0, ',', '.') }}</b></p>
+                                                <p class="card-text text-center">{{ $donation->created_at->format('d M Y') }}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                        class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                        style="width: 100px; height: 100px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Orang Baik</h5>
-                                        <p class="card-text text-center">Berdonasi Sebesar</p>
-                                        <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                        <p class="card-text text-center">2 menit yang lalu</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                        class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                        style="width: 100px; height: 100px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Orang Baik</h5>
-                                        <p class="card-text text-center">Berdonasi Sebesar</p>
-                                        <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                        <p class="card-text text-center">2 menit yang lalu</p>
-                                    </div>
-                                </div>
-
+                                @endforeach
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                        class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                        style="width: 100px; height: 100px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Orang Baik</h5>
-                                        <p class="card-text text-center">Berdonasi Sebesar</p>
-                                        <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                        <p class="card-text text-center">2 menit yang lalu</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                        class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                        style="width: 100px; height: 100px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Orang Baik</h5>
-                                        <p class="card-text text-center">Berdonasi Sebesar</p>
-                                        <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                        <p class="card-text text-center">2 menit yang lalu</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                        class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                        style="width: 100px; height: 100px; object-fit: cover;">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Orang Baik</h5>
-                                        <p class="card-text text-center">Berdonasi Sebesar</p>
-                                        <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                        <p class="card-text text-center">2 menit yang lalu</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#cardSlider"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#cardSlider" data-bs-slide="next">
                     <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            
         </div>
     </main>
     @include('footer')

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Detail Donasi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         .carousel-caption {
             z-index: 2;
@@ -23,8 +23,9 @@
     <main>
         <img src="{{ Storage::url($campaign->image) }}" class="d-block w-100 mt-5" style="max-height: 500px; margin: 0 auto;" alt="..."/>
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h1>Donasi Pembangunan Pondok</h1>
-            <h1 style="margin-right: 125px;">Pesantren AR-RISALAH</h1>
+            <h1>{{ $campaign->title }}</h1>
+            {{-- <h1>Donasi Pembangunan Pondok</h1>
+            <h1 style="margin-right: 125px;">Pesantren AR-RISALAH</h1> --}}
         </div>
         <div class="container my-5">
             <div class="row">
@@ -92,117 +93,40 @@
                 </div>
                 <div id="cardSlider" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
+                        @foreach ($donations->where('status', 'accepted')->chunk(3) as $index => $chunk)
+                            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}" aria-current="{{ $index == 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+                        @endforeach
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                            style="width: 100px; height: 100px; object-fit: cover;">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Orang Baik</h5>
-                                            <p class="card-text text-center">Berdonasi Sebesar</p>
-                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                            <p class="card-text text-center">2 menit yang lalu</p>
+                        @foreach ($donations->where('status', 'accepted')->chunk(3) as $index => $chunk)
+                            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                                <div class="row">
+                                    @foreach ($chunk as $donation)
+                                        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="{{ asset('asset/img/profileorangbaik.jpg') }}" class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil" style="width: 100px; height: 100px; object-fit: cover;">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">{{ $donation->nama_lengkap }}</h5>
+                                                    <p class="card-text text-center">Berdonasi Sebesar</p>
+                                                    <p class="card-text text-center"><b>Rp. {{ number_format($donation->nominal_donasi, 0, ',', '.') }}</b></p>
+                                                    <p class="card-text text-center">{{ $donation->created_at->format('d M Y') }}</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-    
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                            style="width: 100px; height: 100px; object-fit: cover;">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Orang Baik</h5>
-                                            <p class="card-text text-center">Berdonasi Sebesar</p>
-                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                            <p class="card-text text-center">2 menit yang lalu</p>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                            style="width: 100px; height: 100px; object-fit: cover;">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Orang Baik</h5>
-                                            <p class="card-text text-center">Berdonasi Sebesar</p>
-                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                            <p class="card-text text-center">2 menit yang lalu</p>
-                                        </div>
-                                    </div>
-    
+                                    @endforeach
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                            style="width: 100px; height: 100px; object-fit: cover;">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Orang Baik</h5>
-                                            <p class="card-text text-center">Berdonasi Sebesar</p>
-                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                            <p class="card-text text-center">2 menit yang lalu</p>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                            style="width: 100px; height: 100px; object-fit: cover;">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Orang Baik</h5>
-                                            <p class="card-text text-center">Berdonasi Sebesar</p>
-                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                            <p class="card-text text-center">2 menit yang lalu</p>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                            class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                            style="width: 100px; height: 100px; object-fit: cover;">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Orang Baik</h5>
-                                            <p class="card-text text-center">Berdonasi Sebesar</p>
-                                            <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                            <p class="card-text text-center">2 menit yang lalu</p>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#cardSlider"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#cardSlider" data-bs-slide="next">
                         <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-
                 <hr>
                 <div class="container my-4">
                     <div class="row mb-4">
@@ -210,103 +134,42 @@
                             <h4>Doa-doa Orang Baik</h4>
                         </div>
                     </div>
-                    <div id="cardSlider" class="carousel slide" data-bs-ride="carousel">
+                    <div id="cardSlider1" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
+                            @foreach ($donations->where('status', 'accepted')->chunk(2) as $index => $chunk)
+                            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}" aria-current="{{ $index == 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+                            @endforeach
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
+                        <div class="carousel-inner">   
+                            @foreach ($donations->where('status', 'accepted')->chunk(2) as $index => $chunk)
+                            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
                                 <div class="row justify-content-center">
+                                    @foreach ($chunk as $donation)
                                     <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-items-center">
                                         <div class="card" style="width: 30rem;">
                                             <div class="card-body d-flex flex-column align-items-center">
                                                 <div class="d-flex align-items-center me-auto">
-                                                    <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}" class="rounded-circle img-fluid" alt="Foto Profil" style="width: 65px; height: 65px; object-fit: cover;">
+                                                    <img src="{{ asset('asset/img/profileorangbaik.jpg') }}" class="rounded-circle img-fluid" alt="Foto Profil" style="width: 65px; height: 65px; object-fit: cover;">
                                                     <div class="ms-3">
-                                                        <h5 class="card-title">Orang jahat</h5>
-                                                        <p class="card-text">2 menit yang lalu</p>
+                                                        <h5 class="card-title">{{ $donation->nama_lengkap }}</h5>
+                                                        <p class="card-text">{{ $donation->created_at->format('d M Y') }}</p>
                                                     </div>
                                                 </div>
-                                                <p class="card-text mt-3"><b>Bissmillah semoga bisa menambah uang pembangunan dan bisa bermanfaat untuk para santri</b> </p>
+                                                <p class="card-text mt-3"><b>{{ $donation->message }}</b></p>
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-items-center">
-                                        <div class="card" style="width: 30rem;">
-                                            <div class="card-body d-flex flex-column align-items-center">
-                                                <div class="d-flex align-items-center me-auto">
-                                                    <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}" class="rounded-circle img-fluid" alt="Foto Profil" style="width: 65px; height: 65px; object-fit: cover;">
-                                                    <div class="ms-3">
-                                                        <h5 class="card-title">Orang jahat</h5>
-                                                        <p class="card-text">2 menit yang lalu</p>
-                                                    </div>
-                                                </div>
-                                                <p class="card-text mt-3"><b>Bissmillah semoga bisa menambah uang pembangunan dan bisa bermanfaat untuk para santri</b> </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
+                                    <!-- Repeat similar block for other donations -->
                                 </div>
                             </div>
-                            
-                            
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                                class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                                style="width: 100px; height: 100px; object-fit: cover;">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-center">Orang j</h5>
-                                                <p class="card-text text-center">Berdonasi Sebesar</p>
-                                                <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                                <p class="card-text text-center">2 menit yang lalu</p>
-                                            </div>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                                class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                                style="width: 100px; height: 100px; object-fit: cover;">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-center">Orang jah</h5>
-                                                <p class="card-text text-center">Berdonasi Sebesar</p>
-                                                <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                                <p class="card-text text-center">2 menit yang lalu</p>
-                                            </div>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="{{ asset ('asset/img/profileorangbaik.jpg')}}"
-                                                class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil"
-                                                style="width: 100px; height: 100px; object-fit: cover;">
-                                            <div class="card-body">
-                                                <h5 class="card-title text-center">Orang jahat</h5>
-                                                <p class="card-text text-center">Berdonasi Sebesar</p>
-                                                <p class="card-text text-center"><b>Rp. 15.000</b></p>
-                                                <p class="card-text text-center">2 menit yang lalu</p>
-                                            </div>
-                                        </div>
-        
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider"
-                            data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider1" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#cardSlider"
-                            data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#cardSlider1" data-bs-slide="next">
                             <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -316,9 +179,12 @@
         </div>
     </main>
     @include('footer')
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz4fnFO9gybBogGzOg6nv/nu5R3LrC8jjV+0FQ1KpC1i1TVVQ0sKTAtGf9" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-qI1vQyTskveBz3BRTA1a4zO8LVRnB4rtohXZk3uE8IKb+2FMna0RbK6FlkRybW9G" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

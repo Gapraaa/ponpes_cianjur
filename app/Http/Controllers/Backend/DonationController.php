@@ -47,11 +47,14 @@ class DonationController extends Controller
         return redirect()->back()->with('success', 'Donation accepted.');
     }
 
-    public function reject(Donation $donation)
+    public function reject($id)
     {
-        if ($donation->status === 'pending') {
-            $donation->update(['status' => 'rejected']);
-        }
+        // if ($donation->status === 'pending') {
+        //     $donation->update(['status' => 'rejected']);
+        // }
+
+        $donation = Donation::findOrFail($id);
+        $donation->delete();
 
         return redirect()->back()->with('success', 'Donation rejected.');
     }

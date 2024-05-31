@@ -14,7 +14,8 @@ class CampaignController extends Controller
     public function show()
     {
         $campaigns = Campaign::all(); // Retrieve all campaigns
-        return view('campaign.show', compact('campaigns'));
+        $donations = Donation::all();
+        return view('campaign.show', compact('campaigns', 'donations'));
     }
 
     public function detail($id)
