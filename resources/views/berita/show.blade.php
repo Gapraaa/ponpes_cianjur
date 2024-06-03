@@ -42,11 +42,11 @@
                 @foreach($beritas as $berita)
                 <div class="col-md-4 d-flex align-items-stretch">
                     <div class="card flex-fill">
-                        <img src="{{ Storage::url($berita->image) }}" class="card-img-top" alt="...">
+                        <img src="{{ Storage::url($berita->image) }}" class="card-img-top" style="height: 200px" alt="...">
                         <div class="card-body">
                             <h6 class="card-title">{{ $berita->title }}</h6>
                             <br>
-                            <p class="card-text"><small class="text-muted">20 Juli 2019</small></p>
+                            <p class="card-text"><small class="text-muted">{{ $berita->created_at->format('d M Y') }}</small></p>
                         </div>
                     </div>
                 </div>

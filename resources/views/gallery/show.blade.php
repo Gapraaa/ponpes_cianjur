@@ -42,7 +42,7 @@
                     @foreach($gallerys as $gallery)
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
-                            <img src="{{ Storage::url($gallery->image) }}" class="card-img-top" alt="...">
+                            <img src="{{ Storage::url($gallery->image) }}" class="card-img-top" style="height: 200px" alt="...">
                         </div>
                     </div>
                     @endforeach
