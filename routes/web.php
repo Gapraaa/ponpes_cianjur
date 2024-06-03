@@ -74,6 +74,8 @@ Route::prefix('admin')->group(function () {
     Route::post('/donation/{donation}/reject', [BackendDonationController::class, 'reject'])->name('donation.reject');
     Route::delete('/donations/{donation}', [BackendDonationController::class, 'destroy'])->name('donation.destroy');
     Route::post('campaign/{campaign}/donation', [BackendDonationController::class, 'store'])->name('donation.store');
+    Route::get('/donation/campaign/detail', [BackendDonationController::class, 'detailcampaign'])->name('donation.detail');
+    Route::get('/donation/campaign/{id}', [BackendDonationController::class, 'detaildonasi'])->name('donation.campaign');
 
     Route::get('/gallery/index', [BackendGalleryController::class, 'index'])->name('gallery.index');
     Route::get('/gallery/create', [BackendGalleryController::class, 'create'])->name('gallery.create');

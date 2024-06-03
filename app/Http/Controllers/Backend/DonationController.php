@@ -15,6 +15,48 @@ class DonationController extends Controller
         return view('donasi.index', compact('donations'));
     }
 
+    public function detailcampaign() 
+    {
+        // Find the campaign by its ID
+        $campaigns = Campaign::all();
+
+        // If the campaign is not found, return a 404 error
+        if (!$campaigns) {
+            abort(404, 'Campaign not found');
+        }
+
+        // Pass the campaign data to the view
+        return view('donasi.detailcampaign', compact('campaigns'));
+    }
+
+    public function detaildonasi($id)
+    {
+        {
+            // Mendapatkan campaign dengan ID tertentu beserta donasi-donasi yang berstatus 'accepted'
+            $campaign = Campaign::with(['donations' => function($query) {
+                $query->where('status', 'accepted');
+            }])->find($id);
+    
+            if (!$campaign) {
+                return view('campaigns.not_found');
+            }
+    
+            return view('donasi.detaildonasi', ['campaign' => $campaign]);
+        }
+
+        // {
+        //     // Mendapatkan campaign dengan ID tertentu beserta donasi-donasinya
+        //     $campaign = Campaign::with('donations')->find($id);
+    
+        //     if (!$campaign) {
+        //         return view('campaigns.not_found');
+        //     }
+    
+        //     return view('donasi.detaildonasi', ['campaign' => $campaign]);
+        // }
+    }
+    
+
     public function store(Request $request, Campaign $campaign)
     {
         $validated = $request->validate([
@@ -39,7 +81,8 @@ class DonationController extends Controller
 
     public function accept(Donation $donation)
     {
-        if ($donation->status === 'pending') {
+        // Mengizinkan perubahan status dari 'pending' atau 'rejected' ke 'accepted'
+        if ($donation->status === 'pending' || $donation->status === 'rejected') {
             $donation->update(['status' => 'accepted']);
             $donation->campaign->increment('amount', $donation->nominal_donasi);
         }
@@ -47,14 +90,16 @@ class DonationController extends Controller
         return redirect()->back()->with('success', 'Donation accepted.');
     }
 
-    public function reject($id)
+    public function reject(Donation $donation)
     {
-        // if ($donation->status === 'pending') {
-        //     $donation->update(['status' => 'rejected']);
-        // }
-
-        $donation = Donation::findOrFail($id);
-        $donation->delete();
+        // Mengizinkan perubahan status dari 'pending' atau 'accepted' ke 'rejected'
+        if ($donation->status === 'pending' || $donation->status === 'accepted') {
+            if ($donation->status === 'accepted') {
+                // Kurangi jumlah kampanye jika donasi diterima kemudian ditolak
+                $donation->campaign->decrement('amount', $donation->nominal_donasi);
+            }
+            $donation->update(['status' => 'rejected']);
+        }
 
         return redirect()->back()->with('success', 'Donation rejected.');
     }

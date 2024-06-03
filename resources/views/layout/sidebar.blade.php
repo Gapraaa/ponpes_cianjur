@@ -39,11 +39,30 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('donation.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Data Donasi</p>
+                            <a href="#" class="nav-link active">
+                              <i class="nav-icon far fa-envelope"></i>
+                              <p>
+                                DONASI
+                                <i class="fas fa-angle-left right"></i>
+                              </p>
                             </a>
-                        </li>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('donation.index')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>All Donasi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('donation.detail')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Donasi Campaign</p>
+                                    </a>
+                                </li>
+                            </ul>
+                          </li>
                         <li class="nav-item">
                             <a href="{{ route('berita.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>

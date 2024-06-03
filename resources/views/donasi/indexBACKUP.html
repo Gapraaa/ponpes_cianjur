@@ -37,7 +37,6 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nominal</th>
-                                <th>Campaign</th>
                                 <th>Bukti Donasi</th>
                                 <th>Nama Lengkap</th>
                                 <th>No Telpn / Email</th>
@@ -51,20 +50,19 @@
                             <tr>
                                 <td>{{ $donation->id }}</td>
                                 <td>{{ $donation->nominal_donasi }}</td>
-                                <td>{{ $donation->campaign->title }}</td>
                                 <td><img src="{{ Storage::url($donation->bukti_donasi) }}" alt="Bukti Donasi" width="80" height="100" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="{{ Storage::url($donation->bukti_donasi) }}"></td>
                                 <td>{{ $donation->nama_lengkap }}</td>
                                 <td>{{ $donation->phone_email }}</td>
                                 <td>{{ $donation->message }}</td>
                                 <td>{{ $donation->status }}</td>
                                 <td>
-                                    {{-- @if($donation->status === 'accepted')
+                                    @if($donation->status === 'accepted')
                                     <form action="{{ route('donation.destroy', $donation) }}" method="POST" style="display:inline-block;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                     </form>
-                                    @else --}}
+                                    @else
                                     <form action="{{ route('donation.accept', $donation) }}" method="POST" style="display:inline-block;">
                                         @csrf
                                         <button type="submit" class="btn btn-success btn-sm">Accept</button>
@@ -73,7 +71,7 @@
                                         @csrf
                                         <button type="submit" class="btn btn-danger btn-sm">Reject</button>
                                     </form>
-                                    {{-- @endif --}}
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach
