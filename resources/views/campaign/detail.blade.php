@@ -12,7 +12,7 @@
             z-index: 2;
             position: absolute;
             top: 45%;
-            left: 25%;
+            left: 31%;
             transform: translate(-50%, -50%);
             text-align: center;
         }
