@@ -53,16 +53,12 @@ Route::get('/mdta', function () {
 })->name('mdta');
 
 Route::get('/ppdb/create', [FrontendPpdbController::class, 'create'])->name('ppdb.create');
-
 Route::get('campaign/{campaign}/donation/create', [FrontendDonationController::class, 'create'])->name('donation.create');
-
-
 route::get('/campaign/show', [FrontendCampaignController::class, 'show'])->name('campaign.show');
 Route::get('/campaign/detail/{id}', [FrontendCampaignController::class, 'detail'])->name('campaign.detail');
-
 Route::get('/berita/show', [FrontendBeritaController::class, 'show'])->name('berita.show');
-
 Route::get('/gallery/show', [FrontendGalleryController::class, 'show'])->name('gallery.show');
+Route::post('campaign/{campaign}/donation', [FrontendDonationController::class, 'store'])->name('donation.store');
 
 Route::prefix('admin')->group(function () {
     Route::get('/ppdb/index', [BackendPpdbController::class, 'index'])->name('ppdb.index');
@@ -72,8 +68,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/donation/index', [BackendDonationController::class, 'index'])->name('donation.index');
     Route::post('/donation/{donation}/accept', [BackendDonationController::class, 'accept'])->name('donation.accept');
     Route::post('/donation/{donation}/reject', [BackendDonationController::class, 'reject'])->name('donation.reject');
-    Route::delete('/donations/{donation}', [BackendDonationController::class, 'destroy'])->name('donation.destroy');
-    Route::post('campaign/{campaign}/donation', [BackendDonationController::class, 'store'])->name('donation.store');
+    Route::delete('/donation/{donation}', [BackendDonationController::class, 'destroy'])->name('donation.destroy');
+    Route::post('/donation/{campaign}/store', [BackendDonationController::class, 'store'])->name('donation.adminstore');
+
     Route::get('/donation/campaign/detail', [BackendDonationController::class, 'detailcampaign'])->name('donation.detail');
     Route::get('/donation/campaign/{id}', [BackendDonationController::class, 'detaildonasi'])->name('donation.campaign');
 

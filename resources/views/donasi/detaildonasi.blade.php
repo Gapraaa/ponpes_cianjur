@@ -33,13 +33,15 @@
                 <div class="col-sm-5">
                     <h1 class="m-0">Donation for {{ $campaign->title }}</h1>
                 </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#donationModal">Create Donasi</button>
+                </div>
                 <div class="card-body table-responsive p-0">
                     <table class="table table-hover text-nowrap">
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th>Nominal</th>
-                                <th>Campaign</th>
                                 <th>Bukti Donasi</th>
                                 <th>Nama Lengkap</th>
                                 <th>No Telpn / Email</th>
@@ -53,7 +55,6 @@
                             <tr>
                                 <td>{{ $donation->id }}</td>
                                 <td>{{ $donation->nominal_donasi }}</td>
-                                <td>{{ $donation->campaign->title }}</td>
                                 <td><img src="{{ Storage::url($donation->bukti_donasi) }}" alt="Bukti Donasi" width="80" height="100" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="{{ Storage::url($donation->bukti_donasi) }}"></td>
                                 <td>{{ $donation->nama_lengkap }}</td>
                                 <td>{{ $donation->phone_email }}</td>
@@ -147,6 +148,62 @@
             </div>
             <div class="modal-body">
                 <img id="modalImage" src="" alt="Gambar Donasi" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Form Donasi-->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="donationModalLabel">{{ $campaign->title }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Donation form goes here -->
+                <form action="{{ route('donation.adminstore', $campaign) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="mb-3">
+                        <h5 for="nominal_donasi" class="form-label"><strong>Isi Nominal Donasi</strong></h5>
+                        <div class="input-group input-group-lg mb-3 mt-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                            <input type="number" step="0.01" class="form-control" id="nominal_donasi" name="nominal_donasi" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        {{-- <h5 for="bukti_donasi" class="form-label">Bukti Donasi</h5> --}}
+                        <div class="input-group input-group-lg mb-3">
+                            <input type="file" class="form-control" id="bukti_donasi" name="bukti_donasi" placeholder="Bukti Pembayaran">
+                            <label class="input-group-text" for="bukti_donasi">
+                                <svg width="30" height="30" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.9167 36.4167C24.9167 37.7583 25.1658 39.0425 25.5875 40.25H9.58333C8.56667 40.25 7.59165 39.8461 6.87276 39.1272C6.15387 38.4084 5.75 37.4333 5.75 36.4167V9.58333C5.75 7.475 7.475 5.75 9.58333 5.75H36.4167C37.4333 5.75 38.4084 6.15387 39.1272 6.87276C39.8461 7.59165 40.25 8.56667 40.25 9.58333V25.5875C39.0425 25.1658 37.7583 24.9167 36.4167 24.9167V9.58333H9.58333V36.4167H24.9167ZM26.7567 23.5558L21.4858 30.3408L17.7292 25.8175L12.4583 32.5833H25.5875C26.3542 30.4367 27.7342 28.5775 29.5167 27.2358L26.7567 23.5558ZM38.3333 34.5V28.75H34.5V34.5H28.75V38.3333H34.5V44.0833H38.3333V38.3333H44.0833V34.5H38.3333Z" fill="black" />
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <h5 for="nama_lengkap" class="form-label">Masuk atau Lengkapi data dibawah ini</h5>
+                        <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="mb-3">
+                        {{-- <h5 for="phone_email" class="form-label">Phone/Email</h5> --}}
+                        <input type="text" class="form-control" id="phone_email" name="phone_email" placeholder="Nomor Ponsel Atau Email" required>
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <h5 for="message" class="form-label">Sertakan Doa atau dukungan (Opsional)</h5>
+                        <div class="input-group input-group-lg mb-3 mt-3">
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tulis doa untuk Penggalang dana atau dirimu agar bisa di Amini oleh orang baik lainnya."></textarea>
+                        </div>
+                    </div>
+                    <input type="hidden" name="status" value="accepted">
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-success p-3">Kirim Donasi</button>
+                    </div>
+                </form> 
             </div>
         </div>
     </div>

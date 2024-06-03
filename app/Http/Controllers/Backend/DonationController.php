@@ -59,25 +59,34 @@ class DonationController extends Controller
 
     public function store(Request $request, Campaign $campaign)
     {
-        $validated = $request->validate([
-            'nominal_donasi' => 'required|numeric|min:0.01',
-            'bukti_donasi' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'nama_lengkap' => 'required|string|max:255',
-            'phone_email' => 'required|string|max:255',
-            'message' => 'nullable|string',
-        ]);
 
-        if ($request->hasFile('bukti_donasi')) {
-            $validated['bukti_donasi'] = $request->file('bukti_donasi')->store('donation_proofs', 'public');
-        }
+    $validated = $request->validate([
+        'nominal_donasi' => 'required|numeric|min:0.01',
+        'bukti_donasi' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+        'nama_lengkap' => 'required|string|max:255',
+        'phone_email' => 'required|string|max:255',
+        'message' => 'nullable|string',
+    ]);
 
-        $validated['campaign_id'] = $campaign->id;
-        $validated['status'] = 'pending';
-
-        Donation::create($validated);
-
-        return redirect()->route('campaign.show', $campaign)->with('success', 'Donation created successfully.');
+    if ($request->hasFile('bukti_donasi')) {
+        $validated['bukti_donasi'] = $request->file('bukti_donasi')->store('donation_proofs', 'public');
     }
+
+    // Add 'status' field with the value 'accepted'
+    $validated['status'] = 'accepted';
+    $validated['campaign_id'] = $campaign->id;
+
+    // Create the donation
+    $donation = Donation::create($validated);
+
+    // Increment the campaign's amount by the nominal donation
+    $campaign->increment('amount', $validated['nominal_donasi']);
+
+    return redirect()->back()->with('success', 'Donation created successfully.');
+
+    }
+
+
 
     public function accept(Donation $donation)
     {

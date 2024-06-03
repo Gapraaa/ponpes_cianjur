@@ -112,7 +112,7 @@
                         <div class="d-flex justify-content-end">
                             <button type="submit" class="btn btn-success p-3">Kirim Donasi</button>
                         </div>
-                    </form>
+                    </form> 
                 </div>
             </div>
         </div>

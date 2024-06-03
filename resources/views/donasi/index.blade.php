@@ -51,7 +51,7 @@
                             <tr>
                                 <td>{{ $donation->id }}</td>
                                 <td>{{ $donation->nominal_donasi }}</td>
-                                <td>{{ $donation->campaign->title }}</td>
+                                <td style="">{{ $donation->campaign->title }}</td>
                                 <td><img src="{{ Storage::url($donation->bukti_donasi) }}" alt="Bukti Donasi" width="80" height="100" data-bs-toggle="modal" data-bs-target="#imageModal" data-src="{{ Storage::url($donation->bukti_donasi) }}"></td>
                                 <td>{{ $donation->nama_lengkap }}</td>
                                 <td>{{ $donation->phone_email }}</td>
