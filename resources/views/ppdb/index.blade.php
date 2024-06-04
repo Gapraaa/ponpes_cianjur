@@ -1,5 +1,5 @@
-@extends('layout.header')
-@extends('layout.sidebar')
+@include('layout.header')
+@include('layout.sidebar')
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -113,4 +113,4 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-@extends('layout.footer')
+@include('layout.footer')

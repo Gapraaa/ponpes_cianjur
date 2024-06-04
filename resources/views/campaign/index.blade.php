@@ -39,7 +39,6 @@
                             <th>ID</th>
                             <th>image</th>
                             <th>Title</th>
-                            <th>Description</th>
                             <th>Target Amount</th>
                             <th>Amount</th>
                             <th>Actions</th>
@@ -51,16 +50,29 @@
                                 <td>{{ $campaign->id }}</td>
                                 <td><img src="{{ Storage::url($campaign->image) }}" alt="image" width="80" height="100"></td>
                                 <td>{{ $campaign->title }}</td>
-                                <td>{{ $campaign->description }}</td>
                                 <td>{{ $campaign->target_amount }}</td>
                                 <td>{{ $campaign->amount }}</td>
                                 <td>
-                                    <a href="{{ route('campaign.show')}}" class="btn btn-primary">View</a>
+                                    <form action="{{ route('campaign.admindetail', ['id' => $campaign->id]) }}" method="get">
+                                        <button type="button" class="btn btn-primary" style=" width: 80px; ">
+                                            <a href="{{ route('campaign.admindetail', ['id' => $campaign->id]) }}" class="text-white" style="text-decoration: none;">
+                                            View
+                                            </a>
+                                        </button>
+                                    </form>
                                     <!-- Add other actions like edit and delete if needed -->
                                     <form action="{{ route('campaign.delete', $campaign->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-danger" style=" width: 80px; ">Delete</button>
+                                    </form>
+                                    <br>
+                                    <form action="{{ route('campaign.edit', $campaign->id) }}" method="GET">
+                                        <button type="button" class="btn btn-warning" style=" width: 80px; ">
+                                            <a href="{{ route('campaign.edit', $campaign->id) }}" class="text-white" style="text-decoration: none;">
+                                            Edit
+                                            </a>
+                                        </button>
                                     </form>
                                 </td>
                             </tr>

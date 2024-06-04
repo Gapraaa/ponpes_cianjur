@@ -71,8 +71,8 @@ Route::prefix('admin')->group(function () {
     Route::delete('/donation/{donation}', [BackendDonationController::class, 'destroy'])->name('donation.destroy');
     Route::post('/donation/{campaign}/store', [BackendDonationController::class, 'store'])->name('donation.adminstore');
 
-    Route::get('/donation/campaign/detail', [BackendDonationController::class, 'detailcampaign'])->name('donation.detail');
-    Route::get('/donation/campaign/{id}', [BackendDonationController::class, 'detaildonasi'])->name('donation.campaign');
+    // Route::get('/donation/campaign/detail', [BackendDonationController::class, 'detailcampaign'])->name('donation.detail');
+    // Route::get('/donation/campaign/{id}', [BackendDonationController::class, 'detaildonasi'])->name('donation.campaign');
 
     Route::get('/gallery/index', [BackendGalleryController::class, 'index'])->name('gallery.index');
     Route::get('/gallery/create', [BackendGalleryController::class, 'create'])->name('gallery.create');
@@ -88,6 +88,9 @@ Route::prefix('admin')->group(function () {
     route::get('/campaign/create', [BackendCampaignController::class, 'create'])->name('campaign.create');
     route::post('/campaign/store', [BackendCampaignController::class, 'store'])->name('campaign.store');
     route::delete('/campaign/{id}/delete', [BackendCampaignController::class, 'destroy'])->name('campaign.delete');
+    Route::get('/campaign/{id}/edit', [BackendCampaignController::class, 'edit'])->name('campaign.edit');
+    Route::put('/campaign/{id}', [BackendCampaignController::class, 'update'])->name('campaign.update');
+    Route::get('/campaign/{id}/view', [BackendCampaignController::class, 'detail'])->name('campaign.admindetail');
 
     Route::get('/dashboard', [BackendDashboardController::class, 'index'])->name('dashboard.index');
 });
