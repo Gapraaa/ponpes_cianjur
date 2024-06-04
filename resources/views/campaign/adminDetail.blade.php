@@ -68,7 +68,7 @@
                             @foreach ($campaigns->donations as $donation)
                                 <tr>
                                     <td>{{ $donation->id }}</td>
-                                    <td>{{ $donation->nominal_donasi }}</td>
+                                    <td>Rp. {{ number_format($donation->nominal_donasi, 0, ',', '.') }}</td>
                                     <td><img src="{{ Storage::url($donation->bukti_donasi) }}" alt="Bukti Donasi"
                                             width="80" height="100" data-bs-toggle="modal"
                                             data-bs-target="#imageModal"
