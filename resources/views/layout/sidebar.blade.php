@@ -76,6 +76,30 @@
                                 <p>Data Gallery</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('paud.show')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>PAUD</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>MDTA</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>SMP</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>PONPES</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

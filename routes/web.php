@@ -11,6 +11,7 @@ use App\Http\Controllers\Frontend\DonationController as FrontendDonationControll
 use App\Http\Controllers\Frontend\GalleryController as FrontendGalleryController;
 use App\Http\Controllers\Backend\GalleryController as BackendGalleryController;
 use App\Http\Controllers\Backend\DashboardController as BackendDashboardController;
+use App\Http\Controllers\PaudController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,6 +52,7 @@ Route::get('/gallery', function () {
 Route::get('/mdta', function () {
     return view('mdta.index');
 })->name('mdta');
+
 
 Route::get('/ppdb/create', [FrontendPpdbController::class, 'create'])->name('ppdb.create');
 Route::get('campaign/{campaign}/donation/create', [FrontendDonationController::class, 'create'])->name('donation.create');
@@ -93,6 +95,10 @@ Route::prefix('admin')->group(function () {
     Route::get('/campaign/{id}/view', [BackendCampaignController::class, 'detail'])->name('campaign.admindetail');
 
     Route::get('/dashboard', [BackendDashboardController::class, 'index'])->name('dashboard.index');
+
+    Route::get('/paud/show', [PaudController::class, 'show'])->name('paud.show');
+    Route::post('/paud/store', [PaudController::class, 'store'])->name('paud.store');
+    Route::delete('/paud/{id}', [PaudController::class, 'destroy'])->name('paud.destroy');
 });
 
 
