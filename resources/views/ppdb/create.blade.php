@@ -9,35 +9,27 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="asset/style.css" rel="stylesheet" />
-    <style>
-        .carousel-caption {
-            z-index: 2;
-            position: absolute;
-            top: 33%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
 
     @include('navbar')
 
-    <main>
-        <img src="{{ asset('asset/img/ppdb1.jpg') }}" class="d-block w-100" alt="..." />
-        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h2>Penerimaan Peserta Didik Baru</h2>
-            <hr class="col-5 mx-auto border border-light opacity-100 border-2">
-            <h2>Tahun Ajaran 2024/2025</h2>
+    <main class="mt-5">
+        <div class="position-relative mt-5">
+            <img src="{{ asset('asset/img/ppdb1.jpg') }}" class="d-block w-100 mt-5" alt="..." />
+            <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
+                <h2 class="p-2 text-white">Penerimaan Peserta Didik Baru</h2>
+                <hr class="col-2 mx-auto border border-light opacity-100 border-2">
+                <h2 class="p-2 text-white">Tahun Ajaran 2024/2025</h2>
+            </div>
         </div>
         <div class="container mt-5">
 
             <div class="row justify-content-center">
 
                 <div class="col-md-8 col-lg-10">
-                    <h2 class="mb-5">Formulir Pendaftaran Peserta Didik Baru (PPDB)</h2>
+                    <h2 class="mb-4">Formulir Pendaftaran Peserta Didik Baru (PPDB)</h2>
                     <div class="card form-container mb-5">
                         <div class="card-body">
                             <form id="ppdbForm">
@@ -117,7 +109,7 @@
                                     </div>
                                 </div>
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button type="submit" class="col-lg-2 btn btn-success btn-lg fs-5 ">Kirim</button>
+                                    <button type="submit" class="col-lg-2 btn btn-success btn-lg fs-5">Kirim</button>
                                 </div>
                             </form>
                         </div>
@@ -132,20 +124,20 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#ppdbForm').on('submit', function(e) {
+        $(document).ready(function () {
+            $('#ppdbForm').on('submit', function (e) {
                 e.preventDefault();
 
                 $.ajax({
                     type: 'POST',
                     url: "{{ route('ppdb.store') }}",
                     data: $(this).serialize(),
-                    success: function(response) {
+                    success: function (response) {
                         alert('Formulir berhasil dikirim!');
                         // Reset form setelah pengiriman sukses
                         $('#ppdbForm')[0].reset();
                     },
-                    error: function(error) {
+                    error: function (error) {
                         alert('Terjadi kesalahan. Silakan coba lagi.');
                     }
                 });

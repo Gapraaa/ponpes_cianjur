@@ -81,12 +81,12 @@
             <h5 style="margin-left: 220px;">Ayo Selamatkan Hartamu Dengan Bersedekah</h5>
         </div>
         <br>
-        <div class="container mt-5">
+        <div class="container mt-5 col-9 mx-auto">
             @foreach ($campaigns as $campaign)
                 <a href="donasi2.html">
                     <div class="card mb-3" style="max-width: 1150px; height: 220px">
                 </a>
-                <div class="row g-0">
+                <div class="row g-0 ">
                     <div class="col-md-4">
                         <a href="{{ route('campaign.detail', ['id' => $campaign->id]) }}">
                             <img src="{{ Storage::url($campaign->image) }}" class="img-fluid rounded-start"
@@ -106,7 +106,7 @@
                                 <div class="progress-bar bg-success" style="width: {{ ($campaign->amount / $campaign->target_amount) * 100 }}%">
                                 </div>
                             </div>
-                            <div class="button-group d-flex justify-content-center align-items-center mt-2">
+                            <div class="button-group d-flex justify-content-center align-items-center mt-2 float-end">
                                 <button type="button" class="btn btn-primary btn-sm mx-2" style="background-color: #1D3EB3;">
                                     <a href="#" class="text-white" style="text-decoration: none;">
                                         <svg width="20" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +132,7 @@
         </div>
         </div>
         <hr style="margin-top: 30px;">
-        <div class="container my-4">
+        <div class="col-9 mx-auto container my-4">
             <div class="row mb-4">
                 <div class="col-4">
                     <h4>Riwayat Donasi</h4>
