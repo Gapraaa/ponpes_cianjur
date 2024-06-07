@@ -3,62 +3,44 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Mdta;
 
 class MdtaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function show()
     {
-        //
+        $mdtas = Mdta::all();
+        return view('mdta.show', compact('mdtas'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        // Validate the request data
+        $request->validate([
+            'option' => 'required|in:HeaderSlider,KegiatanSlider',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Ensure it's an image
+        ]);
+
+        // Handle the file upload
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('mdta_images', 'public');
+        }
+
+        // Create a new Paud record
+        Mdta::create([
+            'option' => $request->input('option'),
+            'image' => $imagePath, // Save the path to the database
+        ]);
+
+        // Redirect back with a success message
+        return redirect()->route('mdta.show')->with('success', 'Paud created successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function destroy($id)
     {
-        //
-    }
+        $mdtas = Mdta::findOrFail($id);
+        $mdtas->delete();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('mdta.show')->with('success', 'Slider deleted successfully.');
     }
 }
