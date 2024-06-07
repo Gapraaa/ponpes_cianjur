@@ -8,57 +8,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <style>
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        .carousel-caption {
-            z-index: 2;
-            position: absolute;
-            top: 48%;
-            left: 15%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
     @include('navbar')
-    <main>
-        <img src="{{ asset ('asset/img/gallery1.jpg')}}" class="d-block w-100 mt-5" alt="..." />
-        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h1>Gallery</h1>
+    <main class="mt-5">
+        <div class="position-relative mt-5">
+            <img src="{{ asset('asset/img/gallery1.jpg') }}" class="d-block w-100 mt-5" alt="..." />
+            <div class="position-absolute bottom-0 start-0 p-2 text-white">
+                <h2>Gallery</h2>
+            </div>
         </div>
+        
 
-        <section class="container" id="Dailynews">
+        <section class="container-fluid" id="Dailynews">
             <div class="page active" id="page-1">
-                <div class="row g-4 mx-auto p-5">
+                <div class="row row-cols-md-2 row-cols-lg-3 g-4 mx-auto p-5">
                     @foreach($gallerys as $gallery)
-                    <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="col-10 col-sm-6 col-md-4 col-lg-4 d-flex align-items-stretch">
                         <div class="card flex-fill">
-                            <img src="{{ Storage::url($gallery->image) }}" class="card-img-top" style="height: 200px" alt="...">
+                            <img src="{{ Storage::url($gallery->image) }}" class="card-img-top" alt="...">
                         </div>
                     </div>
                     @endforeach
                     <!-- Add more cards here for page 1 -->
                 </div>
             </div>
-            <section class="mx-auto">
+            <section class="mx-auto mt-4">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination d-flex justify-content-center">
                         <li class="page-item">
-                            <a class="page-link" href="{{ $gallerys->previousPageUrl() }}" aria-label="Previous" onclick="showPage('prev')">
+                            <a class="page-link" href="{{ $gallerys->previousPageUrl() }}" aria-label="Previous">
                                 <span aria-hidden="true">Previous</span>
                             </a>
                         </li>
                         <li class="page-item">
-                            <a class="page-link" href="{{ $gallerys->nextPageUrl() }}" aria-label="Next" onclick="showPage('next')">
+                            <a class="page-link" href="{{ $gallerys->nextPageUrl() }}" aria-label="Next">
                                 <span aria-hidden="true">Next</span>
                             </a>
                         </li>
