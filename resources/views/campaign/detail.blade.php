@@ -90,21 +90,19 @@
                     </div>
                 </div>
                 <div id="cardSlider" class="carousel slide" data-bs-ride="carousel">
-                    <!-- Indicators -->
                     <div class="carousel-indicators">
                         @foreach ($donations->where('status', 'accepted')->chunk(3) as $index => $chunk)
                             <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}" aria-current="{{ $index == 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
                         @endforeach
                     </div>
-            
                     <div class="carousel-inner">
                         @foreach ($donations->where('status', 'accepted')->chunk(3) as $index => $chunk)
                             <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                                <div class="row row-cols-1 row-cols-md-3">
+                                <div class="row">
                                     @foreach ($chunk as $donation)
-                                        <div class="col mb-4">
-                                            <div class="card">
-                                                <img src="{{ asset('asset/img/profileorangbaik.jpg') }}" class="card-img-top rounded-circle img-fluid mx-auto mt-3 object-fit-cover" alt="Foto Profil" style="width: 100px; height: 100px;">
+                                        <div class="col-12 {{ $loop->index > 0 ? 'd-none d-md-block' : '' }} col-md-4 d-flex justify-content-center">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="{{ asset('asset/img/profileorangbaik.jpg') }}" class="card-img-top rounded-circle img-fluid mx-auto mt-3" alt="Foto Profil" style="width: 100px; height: 100px; object-fit: cover;">
                                                 <div class="card-body">
                                                     <h5 class="card-title text-center">{{ $donation->nama_lengkap }}</h5>
                                                     <p class="card-text text-center">Berdonasi Sebesar</p>
@@ -118,25 +116,15 @@
                             </div>
                         @endforeach
                     </div>
-            
-                    <!-- Controls -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 16 16">
-                                <path d="M11.354 1.646a.5.5 0 0 0-.708 0L4.5 7.793 10.646 13.94a.5.5 0 0 0 .708-.708L5.207 8l6.147-6.146a.5.5 0 0 0 0-.708z"/>
-                            </svg>
-                        </span>
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#cardSlider" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 16 16">
-                                <path d="M4.646 1.646a.5.5 0 0 1 .708 0L11.5 7.793 5.354 13.94a.5.5 0 1 1-.708-.708L10.793 8 4.646 1.854a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </span>
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </div>
+                </div>                
             </div>
             
                 <hr>
@@ -149,20 +137,20 @@
                     </div>
                     <div id="cardSlider1" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            @foreach ($donations->where('status', 'accepted')->chunk(2) as $index => $chunk)
+                            @foreach ($donations->where('status', 'accepted')->chunk(3) as $index => $chunk)
                                 <button type="button" data-bs-target="#cardSlider1" data-bs-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}" aria-current="{{ $index == 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
                             @endforeach
                         </div>
-                        <div class="carousel-inner">   
-                            @foreach ($donations->where('status', 'accepted')->chunk(2) as $index => $chunk)
+                        <div class="carousel-inner">
+                            @foreach ($donations->where('status', 'accepted')->chunk(3) as $index => $chunk)
                                 <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
                                     <div class="row justify-content-center">
                                         @foreach ($chunk as $donation)
-                                            <div class="col-md-6">
-                                                <div class="card mb-3">
+                                            <div class="col-12 {{ $loop->index > 0 ? 'd-none d-md-none' : '' }} col-sm-6 {{ $loop->index > 1 ? 'd-sm-none' : '' }} col-md-4 d-flex justify-content-center align-items-center">
+                                                <div class="card" style="width: 30rem;">
                                                     <div class="card-body d-flex flex-column align-items-center">
                                                         <div class="d-flex align-items-center me-auto">
-                                                            <img src="{{ asset('asset/img/profileorangbaik.jpg') }}" class="rounded-circle img-fluid object-fit-cover" alt="Foto Profil" style="width: 65px; height: 65px;">
+                                                            <img src="{{ asset('asset/img/profileorangbaik.jpg') }}" class="rounded-circle img-fluid" alt="Foto Profil" style="width: 65px; height: 65px; object-fit: cover;">
                                                             <div class="ms-3">
                                                                 <h5 class="card-title">{{ $donation->nama_lengkap }}</h5>
                                                                 <p class="card-text">{{ $donation->created_at->format('d M Y') }}</p>
@@ -178,29 +166,16 @@
                             @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 16 16">
-                                    <path d="M11.354 1.646a.5.5 0 0 0-.708 0L4.5 7.793 10.646 13.94a.5.5 0 0 0 .708-.708L5.207 8l6.147-6.146a.5.5 0 0 0 0-.708z"/>
-                                </svg>
-                            </span>
+                            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#cardSlider1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 16 16">
-                                    <path d="M4.646 1.646a.5.5 0 0 1 .708 0L11.5 7.793 5.354 13.94a.5.5 0 1 1-.708-.708L10.793 8 4.646 1.854a.5.5 0 0 1 0-.708z"/>
-                                </svg>
-                            </span>
+                            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                    </div>
+                    </div>                    
                 </div>
-                
-                
-                
-                
-                
-        
+            <hr>
     </main>
     @include('footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
