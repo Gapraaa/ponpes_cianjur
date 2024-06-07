@@ -109,13 +109,13 @@
             <h5 class="mt-5 mb-4">Our Program</h5>
             <h3><span style="color: #00763A;">Pendidikan</span> Berbasis Tauhid </h3>
             <hr class="col-1 mx-auto border border-dark opacity-100 border-2 mt-4">
-            <div class="container mt-5">
-                <div class="row row row-cols-1 row-cols-sm-1 row-cols-md-3 g-5">
-                    <div class="col">
-                        <div class="card" >
+            <div class="col-10 col-md-12 col-lg-12 g-5 mx-auto container mt-5">
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-lg-5 flex-lg-row">
+                    <div class="col mt-5">
+                        <div class="card pb-md-5 pb-lg-5 pb-xl-3" >
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
-                                    <svg width="81" height="81" viewBox="0 0 81 81" fill="none"
+                                    <svg class="mt-4" width="81" height="81" viewBox="0 0 81 81" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M70.875 33.75H64.125V13.5H67.5V6.75H13.5V13.5H16.875V33.75H10.125C9.22989 33.75 8.37145 34.1056 7.73851 34.7385C7.10558 35.3715 6.75 36.2299 6.75 37.125V67.5H74.25V37.125C74.25 36.2299 73.8944 35.3715 73.2615 34.7385C72.6286 34.1056 71.7701 33.75 70.875 33.75ZM47.25 60.75V47.25H33.75V60.75H23.625V13.5H57.375V60.75H47.25Z"
@@ -124,17 +124,20 @@
                                             d="M30.375 20.25H37.125V27H30.375V20.25ZM43.875 20.25H50.625V27H43.875V20.25ZM30.375 33.75H37.125V40.5H30.375V33.75ZM43.875 33.75H50.625V40.5H43.875V33.75Z"
                                             fill="#1E1E1E" />
                                     </svg>
-                                    <h3 class="mt-3 mb-3">Boarding School</h3>
-                                    <h6>Program yang diperuntukkan bagi santri yang ingin focus pendidikan formal serta mendapatkan hafalan Quran dengan model belajar full day school. Target hafalan 8 juz dalam 3 tahun.</h6>
+                                    <h5 class="mt-3 mb-3">Boarding School</h5>
+                                    <h6 class="pb-lg-3">Program yang diperuntukkan bagi  santri yang ingin focus pendidikan formal serta
+                                        mendapatkan  hafalan
+                                        Quran  dengan model belajar full day school. Target hafalan 8 juz dalam 3 tahun.
+                                    </h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card" style="background-color: #00763A; color: #FFFFFF;">
+                    <div class="col mt-5">
+                        <div class="card text-white pb-lg-5 pb-md-5 pb-xl-3 " style="background-color: #00763A;">
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
-                                    <svg width="71" height="81" viewBox="0 0 71 81" fill="none"
+                                    <svg class="mt-4 mb-md-2" w"idth="71" height="81" viewBox="0 0 71 81" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_18_84)">
                                             <path
@@ -147,19 +150,19 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <h3 class="mt-3 mb-3">Takhassus</h3>
-                                    <h6>Program khusus tahfidz
-                                        Quran sebagai program Ponpes Modern Ar-Risalah Syafi’iyyah
-                                        dengan target hafalan 20 – 30 juz.</h6>
+                                    <h5 class="mt-3 mb-3 ">Takhassus</h5>
+                                    <h6 class="pb-md-5">Program khusus tahfidz <br> Quran  sebagai program Ponpes Modern Ar-Risalah  Syafi’iyyah
+                                        <br>dengan  target
+                                        hafalan 20 – 30 juz.</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
+                    <div class="col mt-5">
+                        <div class="card pb-md-5 pb-lg-5 pb-xl-4">
                             <div class="card-body">
                                 <div class="justify-content-between align-items-center">
-                                    <svg width="95" height="81" viewBox="0 0 95 81" fill="none"
+                                    <svg class="mt-4" width="95" height="81" viewBox="0 0 95 81" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_24_88)">
                                             <path
@@ -172,13 +175,10 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <h3 class="mt-3 mb-3">Full Day School</h3>
-                                    <h6>Program kelas regular
-                                        tidak berasrama dan tetap mendapatkan muatan keilmuan
-                                        Tsaqofah Islamiyah.
-                                        Hari efektif senin – jumat.
-                                        Target hafalan 4 juz dalam 3 tahun.
-                                    </h6>
+                                    <h5 class="mt-3 mb-3">Full Day School</h5>
+                                    <h6 class="pb-xl-2 pb-lg-3">Program kelas regular <br> tidak berasrama dan tetap mendapatkan  muatan keilmuan <br>
+                                        Tsaqofah Islamiyah. <br>
+                                        Hari efektif senin –  jumat. <br> Target hafalan 4 juz dalam 3 tahun.</h6>
                                 </div>
                             </div>
                         </div>

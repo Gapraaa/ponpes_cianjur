@@ -302,7 +302,7 @@ generasi yang berakhlak mulia.
                         </clipPath>
                       </defs>
                     </svg>
-                    <h5 class="mt-2 mb-3" style="color: #00763A;">Tahfizh Kitab Kuning</h5>
+                    <h5 class="mt-3 mb-3" style="color: #00763A;">Tahfizh Kitab Kuning</h5>
                     <h6 class="mt-2 pb-md-1 d-none d-md-block mb-lg-4 mb-xl-4">Penggunaan kitab kuning dalam sistem pengajaran bertujuan untuk mentrans- <br> misikan Islam tradisional sebagaimana terdapat dalam kitab-kitab klasik yang telah tertulis berabad-abad lalu.</h6>
                     <h6 class="mt-2 pb-md-1 d-block d-md-none">Penggunaan kitab kuning dalam sistem pengajaran bertujuan untuk mentransmisikan Islam tradisional sebagaimana terdapat dalam kitab-kitab klasik yang telah tertulis berabad-abad lalu.</h6>
                   </div>
@@ -318,8 +318,8 @@ generasi yang berakhlak mulia.
                         d="M35.5 47.3333C33.1462 47.3333 30.8888 46.3983 29.2244 44.7339C27.56 43.0695 26.625 40.8121 26.625 38.4583C26.625 35.145 28.4296 32.2458 31.0625 30.7371L59.7879 14.1112L43.4283 42.4521C41.9492 45.3512 38.9613 47.3333 35.5 47.3333ZM35.5 8.875C40.8546 8.875 45.8542 10.3542 50.2029 12.78L43.9904 16.3596C41.4167 15.3538 38.4583 14.7917 35.5 14.7917C29.2232 14.7917 23.2035 17.2851 18.7651 21.7235C14.3268 26.1618 11.8333 32.1815 11.8333 38.4583C11.8333 44.9963 14.4663 50.9129 18.7558 55.1729H18.7854C19.9392 56.3267 19.9392 58.1904 18.7854 59.3442C17.6317 60.4979 15.7383 60.4979 14.5846 59.3737C11.8334 56.6302 9.65137 53.3702 8.16386 49.7809C6.67634 46.1915 5.91266 42.3437 5.91667 38.4583C5.91667 30.6123 9.03348 23.0877 14.5814 17.5398C20.1294 11.9918 27.654 8.875 35.5 8.875ZM65.0833 38.4583C65.0833 46.6233 61.77 54.0192 56.4154 59.3737C55.2617 60.4979 53.3979 60.4979 52.2442 59.3442C51.9699 59.0705 51.7523 58.7454 51.6039 58.3875C51.4554 58.0296 51.379 57.646 51.379 57.2585C51.379 56.8711 51.4554 56.4874 51.6039 56.1296C51.7523 55.7717 51.9699 55.4466 52.2442 55.1729C54.4443 52.9818 56.1887 50.3767 57.3769 47.5079C58.565 44.6391 59.1733 41.5634 59.1667 38.4583C59.1667 35.5 58.6046 32.5417 57.5692 29.8792L61.1488 23.6667C63.6042 28.1042 65.0833 33.0742 65.0833 38.4583Z"
                         fill="#00763A" />
                     </svg>
-                    <h5 class="mt-2 mb-3 mb-md-4" style="color: #00763A;">Tahfizh Hadist</h5>
-                    <h6 class="mt-2 pb-lg-3 pb-xl-4 pb-md-4 ">Program tahfizh hadist merupakan kunci memahami Alquran, jalan untuk mengetahui petunjuk Rasulullah, dan sumber dalil syari’i setelah Alquran</h6>
+                    <h5 class="mt-3 mb-3 mb-md-4" style="color: #00763A;">Tahfizh Hadist</h5>
+                    <h6 class="mt-2 pb-lg-3 pb-xl-4 mb-xl-3 pb-md-4 ">Program tahfizh hadist merupakan kunci memahami Alquran, jalan untuk mengetahui petunjuk Rasulullah, dan sumber dalil syari’i setelah Alquran</h6>
                   </div>
                 </div>
               </div>
@@ -336,8 +336,8 @@ generasi yang berakhlak mulia.
                         d="M28.5759 34.98L43.9218 17.6147C44.2839 17.2049 44.7064 17 45.1893 17C45.6721 17 46.0946 17.2049 46.4568 17.6147C46.8189 18.0245 47 18.5115 47 19.0756C47 19.6398 46.8189 20.1261 46.4568 20.5345L29.8434 39.3853C29.4813 39.7951 29.0588 40 28.5759 40C28.0931 40 27.6706 39.7951 27.3084 39.3853L19.5223 30.5746C19.1602 30.1648 18.9863 29.6785 19.0008 29.1157C19.0153 28.5529 19.2042 28.066 19.5676 27.6548C19.9309 27.2436 20.3613 27.0387 20.8586 27.0401C21.356 27.0415 21.7857 27.2464 22.1479 27.6548L28.5759 34.98Z"
                         fill="#00763A" />
                     </svg>
-                    <h5 class="mt-2 mb-3 mb-md-4 " style="color: #00763A;">Tahfizh Qur’an</h5>
-                    <h6 class="mt-2 pb-xl-2 pb-lg-4 pb-md-3 mb-md-2">Program tahfizh Qur’an sendiri merupakan program yang diadakan untuk menghafal Alquran dengan hafalan yang kuat pada lafadz-lafadz yang terdapat pada kumpulan wahyu Allah ini. </h6>
+                    <h5 class="mt-3 mb-3 mb-md-4 " style="color: #00763A;">Tahfizh Qur’an</h5>
+                    <h6 class="mt-2 pb-xl-2 pb-lg-4 mb-xl-2 pb-md-3 mb-md-2">Program tahfizh Qur’an sendiri merupakan program yang diadakan untuk menghafal Alquran dengan hafalan yang kuat pada lafadz-lafadz yang terdapat pada kumpulan wahyu Allah ini. </h6>
                   </div>
                 </div>
               </div>
