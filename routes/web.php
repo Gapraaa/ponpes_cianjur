@@ -33,7 +33,7 @@ Route::get('/main', function () {
 //     return view('dashboard.index');
 // });
 
-Route::get('/ponpes', function () {
+Route::get('/', function () {
     return view('ponpes.index');
 })->name('ponpes');
 
