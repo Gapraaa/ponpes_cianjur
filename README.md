@@ -1,15 +1,14 @@
 # 🕌 Ponpes Cianjur – Sistem Informasi Pesantren
 
-**Ponpes Cianjur** adalah sistem informasi berbasis web yang dirancang untuk membantu pengelolaan data di lingkungan Pondok Pesantren. Aplikasi ini bertujuan untuk memudahkan pengelolaan santri, data guru, jadwal kegiatan, dan administrasi lainnya.
+**Ponpes Cianjur** adalah sistem informasi berbasis web yang dirancang untuk membantu pengelolaan data di lingkungan Pondok Pesantren. Aplikasi ini bertujuan untuk memudahkan pengelolaan data ppdb, jadwal kegiatan, dan administrasi lainnya.
 
 ---
 
 ## 🎯 Fitur Utama
 
-* 📋 Pendataan santri dan ustadz
+* 📋 Pendataan Peserta didik baru
 * 🗓 Manajemen jadwal pelajaran dan kegiatan pesantren
 * 💬 Sistem pengumuman internal
-* 💾 Laporan bulanan atau tahunan (opsional)
 * 🛠 Panel admin untuk mengelola semua data
 
 ---
